@@ -9,7 +9,7 @@ int main()
     //o tipo de variável afeta a computação no if
     float numero, raiz, quadrado;
     
-    printf("Informe um número inteiro e positivo\n");
+    printf("Informe um numero inteiro e positivo\n");
     scanf("%f", &numero);
     
     if (numero < 0 || numero != (int)numero ){
