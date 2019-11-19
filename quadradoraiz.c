@@ -18,7 +18,8 @@ int main()
         
     } else {
         
-        quadrado = numero * numero;
+        //quadrado = numero * numero;
+        quadrado = pow(numero, 2);
         printf("O quadrado do numero %.2f eh %.2f\n", numero, quadrado);
         
         raiz = sqrt(numero);
