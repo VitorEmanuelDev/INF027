@@ -1,3 +1,6 @@
+//Escreva um programa que leia um numero inteiro positivo e apresente o quadrado e a raiz quadrada desse numero
+
+
 #include <stdio.h>
 #include <math.h>
 
