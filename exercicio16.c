@@ -1,29 +1,27 @@
-
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+// usar a função abs() caso o número informado seja negativo
 
 int main()
-{
+{   
+    int num, resto;
     
-//     int cent, dez, uni;
+    printf("Informe um número.\n");
+    scanf("%d", &num);
     
-//     printf("Insira o número da centena.\n");
-//     scanf("%d", &cent);
+    while(num > 0){
+        
+    resto = num % 10;
+    num = num / 10;
     
-//     printf("Insira o número da dezena.\n");
-//     scanf("%d", &dez);
+    printf("%d", resto);
     
-//     printf("Insira o número da centena.\n");
-//     scanf("%d", &uni);
-    
-    
-//     printf(" O seu número é %d%d%d.\n", cent, dez, uni);
-    
-//    int num [] = {cent, dez, uni};
-   
-   
-    
-//    printf("O número ao contrário é: %d%d%d.\n", num[2], num[1], num[0]);
-    
+        }
+        
+    num++;
     
     return 0;
 }
