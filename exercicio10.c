@@ -4,7 +4,8 @@
 int main()
 {
     int binario[3], numero, i, j;
-    //a variável binario[x] contém num array o maior valor possível que pode ser representado
+    //a variável binario[x] contém num array o maior valor possível que pode ser representado.
+    //Caso a condição do if permita algum número que seja maior do que 31, haverá um segmentation error devido a um uso de memória indevido, já que o espaço fornecido pelo array não comporta números superiores a 32 em forma binária.
    
     printf("Informe um número inferior a 32.\n");
     scanf("%d", &numero);
