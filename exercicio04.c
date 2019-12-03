@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-float b, B, h, area;
+float b, B, h, area, perimetro;
 
 int main()
 {
@@ -13,7 +13,11 @@ int main()
     
     area = ((b + B)*h)/2;
     
-    printf("A area eh igual a %f\n", area);
+    printf("A area é igual a %.2f\n", area);
+    
+    perimetro = b + B + h;
+    
+    printf("O perímetro é igual a %.2f.", perimetro);
     
 
     return 0;
