@@ -1,9 +1,11 @@
+//Escreva um programa que permute o valor de duas variáveis inteiras.
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
-    int a, b, tmp; 
+    int a, b, holder; 
     
     printf("Valor de a: \n");
     scanf("%d", &a);
@@ -16,11 +18,11 @@ int main()
     
     //Permutação
     
-    tmp = a;
+    holder = a;
     
     a = b;
     
-    b = tmp;
+    b = holder;
     
     printf("Depois da permutação: \n");
     printf("a = %d , b = %d \n", a, b);
