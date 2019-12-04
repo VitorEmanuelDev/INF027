@@ -1,3 +1,5 @@
+//Ler um número inteiro e exibir o seu sucessor.
+
 #include <stdio.h>
 
 int main()
