@@ -1,3 +1,5 @@
+//Dado os três lados de um triângulo determinar o perímetro do mesmo.
+
 #include <stdio.h>
 
 float b, B, h, area, perimetro;
