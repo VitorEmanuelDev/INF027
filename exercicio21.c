@@ -7,7 +7,7 @@ int main()
 {
     int numero;
     
-    printf("Informe um número");
+    printf("Informe um número\n");
     scanf("%d", &numero);
     
     if (numero > 0){
@@ -22,3 +22,4 @@ int main()
 
     return 0;
 }
+
