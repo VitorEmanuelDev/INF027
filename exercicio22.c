@@ -1,4 +1,4 @@
-//Escreva um programa que leia um número e exiba o seu módulo
+//Escreva um programa que leia um número e exiba o seu módulo sem usar abs()
 
 
 #include <stdio.h>
@@ -7,12 +7,12 @@ int main()
 {
     int numero, absoluto;
     
-    printf("Informe um número");
+    printf("Informe um número\n");
     scanf("%d", &numero);
     
     if (numero > 0){
         
-        printf("O valor absoluto %d é |%d|.", numero);
+        printf("O valor absoluto %d é |%d|.",numero, numero);
         
     } else {
         
@@ -24,3 +24,4 @@ int main()
 
     return 0;
 }
+
