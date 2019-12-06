@@ -16,8 +16,6 @@ main ()
 {
   int nota1, nota2, nota5, nota10, nota20, nota50, nota100;
   
-  int sacada;
-  
   int valor;
 
 
@@ -33,7 +31,7 @@ main ()
       printf("Valor solicitado: %d.\n", valor);        
       printf ("\nContando cédulas... 1 cédula de %d ...Pode sacar.", valor);
       
-    } else if (valor == 5 || valor == 2 || valor == 1){
+    } else if (valor < 10 || valor == 5 || valor == 2 || valor == 1){
         
       printf("O caixa não emite valores inferiores a R$ 10");  
       
