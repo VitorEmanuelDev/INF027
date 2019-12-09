@@ -18,9 +18,10 @@ int main()
         
     } else {
         
-        printf("A letra '%c' não é uma vogal.", letra);
+        printf("A letra '%c' é uma consoante", letra);
         
     }
 
     return 0;
 }
+
