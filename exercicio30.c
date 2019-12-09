@@ -14,40 +14,59 @@ do álcool é R$ 1,90.*/
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+float main()
 {
+    
+     
     int i;
-    char letra[] = "ag";
-    float litrosA, litrosG, precoG = 2.7, precoA = 1.9, precoF;
+    char letra;
+    char alga[] = "ag";
+    float litrosA, litrosG; 
+    float precoG = 2.70, precoA = 1.90, precoF;
     
     printf("Álcool ou gasolina?\n");
     printf("A - álcool.\n");
     printf("G - gasolina.\n");
     scanf("%c", &letra);
     
-    if(letra[i] == 0){
+    if(letra == alga[0]){
         
         printf("Álcool escolhido.\n");
         printf("Quantos litros vai colocar no tanque?\n");
-        scanf("%f", litrosA);
+        scanf("%f", &litrosA);
         
-        if(litrosA < 25){
+        if(litrosA > 0 && litrosA < 25){
+        
+            precoF = precoA *litrosA - (precoA * litrosA * 0.02); 
+            printf("Preço: %.2f", precoF);
             
-            precoF = precoA - (precoA * 0.02); 
+        } else {
             
-        } else if{
-            
-        } else{
+            precoF = precoA *litrosA - (precoA * litrosA * 0.04);   
+            printf("Preço: %.2f", precoF);
             
         }
         
-    } else if(letra[i] == 1){
+    } else if(letra == alga[1]){
         
         printf("Gasolina escolhida.\n");
         printf("Quantos litros vai colocar no tanque?\n");
-        scanf("%f", litrosG);
+        scanf("%f", &litrosG);
+        
+        if(litrosG > 0 && litrosG < 25){
+          
+            precoF = precoG * litrosG - (precoG * litrosG * 0.03); 
+            printf("Preço: %.2f", precoF);
+            
+        } else {
+            
+            precoF = precoG * litrosG - (precoG * litrosG * 0.05);   
+            printf("Preço: %.2f", precoF);
+            
+        }
     
-    } else if(letra[i] != || )
+    }
     
     return 0;
 }
+
