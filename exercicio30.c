@@ -31,9 +31,13 @@ int main()
         printf("Quantos litros vai colocar no tanque?\n");
         scanf("%f", litrosA);
         
-        if(abs(litrosA) < 25){
+        if(litrosA < 25){
             
             precoF = precoA - (precoA * 0.02); 
+            
+        } else if{
+            
+        } else{
             
         }
         
@@ -43,7 +47,7 @@ int main()
         printf("Quantos litros vai colocar no tanque?\n");
         scanf("%f", litrosG);
     
-    }
+    } else if(letra[i] != || )
     
     return 0;
 }
