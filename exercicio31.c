@@ -1,29 +1,56 @@
-/*No Futebol Americano, usa-se o Quarterback Rating como um índice que indica o
-desempenho do quarterback (quando maior, melhor). Ele é calculado como indicado a
-seguir: Calcula-se o percentual de passes completados em relação aos passes tentados
-pelo quarterback. Deste valor subtrai-se 0,3 e divide-se por 0,2. Este valor não deve ser
-maior que 2,375 ou menor que 0 (caso seja, ajusta-se o valor para 2,375 ou 0,respectivamente).
+/*
 
-Em seguida, calcula-se a razão de yards passadas pela quantidade de passes tentados.
-Deste valor, subtrai-se 3 e divide-se por 4. Novamente, este valor não deve ser maior que
-2,375 ou menor que 0 (caso seja, procede-se como no caso anterior).
+The NFL passer rating formula includes four variables: completion percentage,
+yards per attempt, touchdowns per attempt, and interceptions per attempt. Each 
+of those variables is scaled to a value between 0 and 2.375, with 1.0 being 
+statistically average (based on league data between 1960–1970). When the formula 
+was first created, a 66.7 rating indicated an average performance, and a 100+ 
+rating indicated an excellent performance. However, passing performance has 
+improved steadily since then and in 2017 the league average rating was 88.6.
 
-Agora, calcula-se a razão de passes para touchdows pelo número de passes tentados.
-Divide-se o valor por 0,05. Mais uma vez, este valor não deve ser maior que 2,375 ou
-menor que 0 (caso seja, procede-se como de costume).
+The four separate calculations can be expressed in the following equations:
 
-Então, calcula-se a razão entre passes interceptados e o número de passes tentados. Deste
-valor, subtrai-se 0,095 e divide-se o resultado por 0,04. Como de praxe, este valor não
-deve ser maior que 2,375 ou menor que 0 (caso seja, atua-se como explicado).
+    a = ((completions/attempts)- 0.3) * 5;
+    b = ((yards/attempts)- 3) * 0.25;
+    c = (touchdowns/attempts) * 20;
+    d = (2.375 - (interceptions/attempts) * 25);
 
-O quarterback rating é calculando somando-se as quatro parcelas anteriores,
-multiplicando a soma por 100 e dividindo-se o produto por 6.
 
-Escreva um programa, que leia o número de passes tentados, o número de passes
-completos, o número de yards passados, o número de passes para touchdown e o número
-de passes interceptados e informe o QB Rating do quarterback.*/
+where
+
+ATT = Number of passing attempts
+COMP = Number of completions
+YDS = Passing yards
+TD = Touchdown passes
+INT = Interceptions
+
+If the result of any calculation is greater than 2.375, it is set to 2.375.
+If the result is a negative number, it is set to zero.
+
+Then, the above calculations are used to complete the passer rating:
+
+A perfect passer rating (158.3) requires at least:[1]	A minimum rating (0.0) requires at best:
+
+77.5% completion percentage
+12.5 yards per attempt
+11.875% TD/ATT (1 TD/8.421ATT)
+No interceptions
+
+30.0% completion percentage
+3.0 yards per attempt
+No touchdowns
+9.5% INT/ATT (1INT/10.526ATT)
+
+fonte
+
+https://en.wikipedia.org/wiki/Passer_rating#:~:targetText=Passer%20rating%20(also%20known%20as,
+primarily%20quarterbacks%2C%20in%20gridiron%20football.&targetText=Passer%20rating%20is%20
+calculated%20using,yards%2C%20touchdowns%2C%20and%20interceptions.
+
+*/
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -32,7 +59,7 @@ int main()
     float completions, attempts, yards, touchdowns, interceptions;
     
     printf("Qual o nome do quarterback?.\n");
-    //suggestions: sacana. Apenas o primeiro nome aparecerá.
+    //suggestions: "sacana". Obs: Apenas o primeiro nome aparecerá com a configuração atual.
     scanf("%s", nome);
     
     printf("Informe o número de passes completos do %s.\n", nome);
@@ -47,13 +74,14 @@ int main()
     printf("Informe o número de touchdowns originados pelo %s.\n", nome);
     scanf("%f", &touchdowns);
     
-    printf("Informe o número de passes interceptados pelo %s.\n", nome);
+    printf("Informe o número de passes do %s que foram interceptados.\n", nome);
     scanf("%f", &interceptions);
     
-    a = ((completions/attempts)- 0.3)/ 0.2; 
-    b = ((touchdowns/attempts) - 3)/ 0.5;
-    c = ((interceptions/attempts) - 0.095)/ 0.04;
-    d = ((yards/attempts)- 3)/ 4;
+    a = ((completions/attempts)- 0.3) * 5;
+    b = ((yards/attempts)- 3) * 0.25;
+    c = (touchdowns/attempts) * 20;
+    d = (2.375 - (interceptions/attempts) * 25);
+    
     
     if(a > 2.375){
         
@@ -98,7 +126,7 @@ int main()
    
     //a,b,c e d não podem ser maiores do que 2.375 ou menores que zero.
     
-    rating = ((a + b + c + d)*100)/ 6;
+    rating = ((a + b + c + d) / 6)  *100;
     
     printf("O QB rating do %s foi de: %.3f.\n", nome, rating);
     
@@ -108,8 +136,9 @@ int main()
         
     } else {
         
-        printf("Esse %s está precisando de férias.", nome);    }
+        printf("Esse %s está precisando de férias...", nome);    }
     
     return 0;
 }
+
 
