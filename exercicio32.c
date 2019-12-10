@@ -1,38 +1,51 @@
 /*Escreva um programa que leia um caracter e diga se ele é uma vogal, consoante, número
-ou um símbolo (qualquer outro caracter, que não uma letra ou número).*/
+ou um símbolo (qualquer outro caracter, que não uma letra ou número). 
+
+https://pt.wikipedia.org/wiki/ASCII
+
+*/
 
 #include <stdio.h>
 
 int main()
 {
-    int i;
-    char elemento [] = "abcdefghijklmnopqrstuvxz0123456789";
+    char caracter;
     
-    printf("Informe um número ou uma letra ou um símbolo");
-    scanf("%c", elemento);
+    printf("Informe um número ou uma letra ou um símbolo.\n");
+    scanf("%c", &caracter);
     
-    if(elemento == "a" || elemento == "e" || elemento == "i" 
-    || elemento == "o" || elemento == "u") {
-        
-        printf("O caracter escolhido é uma vogal.");
-        
-    } /* else if (elemento != "a" || elemento != "e" || elemento != "i" 
-    || elemento != "o" || elemento != "u"){
-        
-        printf("O caracter escolhido é uma consoante.");
-        
-    } else if( elemento[i] > 23){
-        
-        printf("O caracter escolhido é um número.");
-        
+   if(caracter >= '0' && caracter <= '9'){
+       
+       printf("O caracter escolhido é um número.");
+       
+    } else if ((caracter >= 'A' && caracter <= 'Z') ||
+              (caracter >= 'a' && caracter <= 'z')){
+             
+             printf("O caracter escolhido é uma ");     
+                  
+                  if((caracter == 'A') ||
+                     (caracter == 'E') ||
+                     (caracter == 'I') ||
+                     (caracter == 'O') ||
+                     (caracter == 'U') ||
+                     (caracter == 'a') ||
+                     (caracter == 'e') ||
+                     (caracter == 'i') ||
+                     (caracter == 'o') ||
+                     (caracter == 'u')) {
+                         
+                         printf("vogal.");
+                         
+                     } else {
+                         
+                         printf("consoante.");
+                         
+                     }
     } else {
         
         printf("O caracter escolhido é um símbolo.");
         
-    } */
+    }
 
     return 0;
 }
-
-
-
