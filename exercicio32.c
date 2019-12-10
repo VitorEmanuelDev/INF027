@@ -6,6 +6,7 @@ ou um símbolo (qualquer outro caracter, que não uma letra ou número).*/
 int main()
 {
     int i;
+    //precisa ser corrigido
     char elemento [] = "abcdefghijklmnopqrstuvxz0123456789";
     
     printf("Informe um número ou uma letra ou um símbolo");
