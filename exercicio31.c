@@ -50,7 +50,6 @@ calculated%20using,yards%2C%20touchdowns%2C%20and%20interceptions.
 */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
@@ -130,13 +129,13 @@ int main()
     
     printf("O QB rating do %s foi de: %.3f.\n", nome, rating);
     
-    if (rating > 100){
+    if (rating > 90){
         
         printf("Esse %s joga muito!", nome);
         
     } else {
         
-        printf("Esse %s está precisando de férias...", nome);    }
+        printf("Esse %s está precisando melhorar", nome);    }
     
     return 0;
 }
