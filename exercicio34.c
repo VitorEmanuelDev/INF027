@@ -33,16 +33,17 @@ float main()
         printf("Sua renda está abaixo do valor solicitado.\n");
         printf("Por favor solicite um valor que seja até 10 vezes o da sua renda mensal.\n");
         
-    } else if(valorPrestacao > ((int)rendaMensal/3)){
+    } else if(valorPrestacao > (rendaMensal*0.3)){
         
-        printf("O valor da sua prestação não pode estar acima de 3/10 do valor da sua renda mensal.\n");
+        printf("O valor da sua prestação não pode estar acima de 30 porcento do valor da sua renda mensal.\n");
         
     } else {
         
         printf("Seu empréstimo foi aprovado!\n");
-        printf("R$ %.2f em %d prestações de %d.\n",valorTotalEmp, numPrestacao, valorPrestacao);
+        printf("R$ %.2f em %d prestações de R$ %d.\n",valorTotalEmp, numPrestacao, valorPrestacao);
         
     }
     
     return 0;
 }
+
