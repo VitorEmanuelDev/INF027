@@ -66,17 +66,19 @@ int main()
         
     } 
     
-    if(custo > 750 && area < 1000){
+    if(area > 1000){
         
-        desconto1 = custo * 0.9;
+        desconto1 = custo * 0.95;
         
         printf("Após desconto, seu preço final foi de: %.2f\n", desconto1);
         
-    } else if (custo > 750 && area > 1000){
+    } 
+    
+    if (custo > 750){
         
-        desconto2 = custo * 0.855;
+        desconto1 = desconto1 - ((desconto1 - 750) * 0.1);
         
-        printf("Após desconto, seu preço final foi de: %.2f\n", desconto2);
+        printf("Após desconto, seu preço final foi de: %.2f\n", desconto1);
         
     }
     
