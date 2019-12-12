@@ -56,7 +56,7 @@ int main()
         
         break;
         
-        case 4: printf("Ervas, gafanhotos ebroca: R$ 250,00 por acre.\n"); 
+        case 4: printf("Ervas, gafanhotos e broca: R$ 250,00 por acre.\n"); 
         
         custo = area * todos;
         
@@ -70,7 +70,7 @@ int main()
         
         desconto1 = custo * 0.95;
         
-        printf("Após desconto, seu preço final foi de: %.2f\n", desconto1);
+        printf("Após desconto, seu preço foi de: %.2f\n", desconto1);
         
     } 
     
@@ -78,10 +78,11 @@ int main()
         
         desconto1 = desconto1 - ((desconto1 - 750) * 0.1);
         
-        printf("Após desconto, seu preço final foi de: %.2f\n", desconto1);
+        printf("Após o segundo desconto, seu preço foi de: %.2f\n", desconto1);
         
     }
     
     return 0;
 }
+
 
