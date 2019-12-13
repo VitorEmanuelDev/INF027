@@ -9,13 +9,13 @@ main ()
 {
   int num, unidade;
 
-  printf ("Informe um nC:mero de 1 a 100.\n");
+  printf ("Informe um número de 1 a 100.\n");
   scanf ("%d", &num);
 
   if (num <= 0 || num > 100)
     {
 
-      printf ("Sua escolha nC#o estC! dentro do escopo.\nTente novamente.\n");
+      printf ("Sua escolha não está dentro do escopo.\nTente novamente.\n");
 
     }
   else if ((num / 100 == 1))
