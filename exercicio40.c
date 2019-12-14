@@ -122,7 +122,7 @@ main ()
 	  else if (unidade == 3)
 	    {
 
-	      printf (" e trC*s");
+	      printf (" e três");
 
 	    }
 	  else if (unidade == 2)
@@ -247,7 +247,7 @@ main ()
 	  else if (num == 3)
 	    {
 
-	      printf ("TrC*s");
+	      printf ("Três");
 
 	    }
 	  else if (num == 2)
@@ -266,3 +266,4 @@ main ()
     }
   return 0;
 }
+
