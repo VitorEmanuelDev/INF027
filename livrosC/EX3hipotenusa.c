@@ -12,19 +12,20 @@ do triângulo gerados combinando M e N.
 
 int main()
 {
-    int ladoM, ladoN, HipotenusaAoQuadrado, Hipotenusa;
+    int M, N, HipotenusaAoQuadrado, Hipotenusa;
     
     printf("Informe o lado M e o lado N. Lembre-se que M > N e nenhum dos dois pode ser negativo.\n");
-    scanf("%d", &ladoM);
-    scanf("%d", &ladoN);
+    scanf("%d", &M);
+    scanf("%d", &N);
     
-    if( ladoM > ladoN && (ladoM && ladoN) > 0) {
+    if( M > N && (M && N) > 0) {
         
-        HipotenusaAoQuadrado = pow(ladoM, 2) + pow(ladoN, 2);
+        HipotenusaAoQuadrado = pow(M, 2) + pow(N, 2);
         
         Hipotenusa = sqrt(HipotenusaAoQuadrado);
         
-        printf("A hipotenusa mede %d cm.", Hipotenusa);
+        printf("A hipotenusa mede %d cm, o cateto L1 mede %d cm e o cateto L2 %d cm.", Hipotenusa, M, N);
+        
         
     } else {
         
