@@ -1,0 +1,40 @@
+/*Dado um número de três algarismos,
+construir outro número de quatro algarismos
+de acordo com a seguinte regra:
+
+Os três primeiros algarismos, contados da esquerda
+para a direita são iguais ao número dado.
+
+O quarto algarismo é um digito de controle calculado 
+da seguinte forma:
+
+primeiro número + segundo número * 3 + terceiro número * 5. 
+
+O dígito de controle é igual ao resto da divisão dessa soma por 7.*/
+
+#include <stdio.h>
+
+int main()
+{
+    int centena, dezena, unidade, controle, numero, numeroV10, digControle, numeroFinal;
+    
+    printf("Informe um número de três algarismos.\n");
+    scanf("%d", &numero);
+    
+    numeroV10 = numero * 10; //546*10 = 5460
+
+    centena = numero/100; //546/100 = 5
+    
+    dezena = (numero/10)%10; //546/10 = 54%10 = 4
+    
+    unidade = numero%10; // 546%10 = 6
+
+    digControle = (centena + (dezena * 3) + (unidade * 5))%7; //(5 + (4 * 3) + (6 * 5))%7 = 5
+    
+    numeroFinal = numeroV10 + digControle; // 5460 + 5 = 5465
+    
+    printf("O número de quatro algarismos após aplicação das regras é %d", numeroFinal);
+    
+
+    return 0;
+}
