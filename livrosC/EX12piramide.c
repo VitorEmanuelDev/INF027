@@ -7,12 +7,12 @@ int main()
 {
     float base, altura, volume;
     
-    printf("Informe a área da base e a altura.\n");
+    printf("Informe a área da base e a altura em metros.\n");
     scanf("%f%f", &base, &altura);
     
     volume = (base * altura)/3;
     
-    printf("O volume da pirâmide é de %.2f. m²", volume);
+    printf("O volume da pirâmide é de %.2f m²", volume);
 
     return 0;
 }
