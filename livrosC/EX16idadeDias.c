@@ -7,7 +7,7 @@ e dias e mostre-a apenas em dias.*/
 int main()
 {
     
-    float idade, meses, dias, idadeDias, diasAno = 365, diasMes = 30.4375;
+    float idade, meses, dias, idadeDias, diasAno = 365.25, diasMes = 30.4375;
     
     printf("Quantos anos a pessoa tem?\n");
     scanf("%f", &idade);
