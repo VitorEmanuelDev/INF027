@@ -7,18 +7,18 @@ expressa em anos, meses e dias.*/
 int main()
 {
     
-    int idadeAnos, restoIdadeAnos, idadeMes, idadeDias, ano = 365.25, mes = 30.4375;
+    int dias, resto, idadeAnos, restoDias, idadeMes, idadeDias, ano = 365, mes = 30;
     
     printf("Qual a idade da pessoa em dias?\n");
-    scanf("%d", &idadeDias);
+    scanf("%d", &dias); // 10227
     
-    idadeAnos = idadeDias/ano;
+    idadeAnos = dias/ano; // 10227/365 = 28 anos
     
-    restoIdadeAnos = idadeDias%ano;
+    resto = dias%ano; // 10227%365 = 7
     
-    idadeMes = restoIdadeAnos/mes;
+    idadeMes = resto/mes; // 7/30 = 0 meses
     
-    idadeDias = idadeMes%mes;
+    idadeDias = idadeMes%mes; // 0%30 = 0 dias
     
     printf("A pessoa tem %d anos, %d meses e %d dias.", idadeAnos, idadeMes, idadeDias);
 
