@@ -15,7 +15,7 @@ int main()
     dezena = resto/10; // 8 = 87/10;
     unidade = resto%10; // 7 = 87%10;
     
-    numNovo = (unidade * 100) + (dezena * 10) + centena;
+    numNovo = (unidade * 100) + (dezena * 10) + centena; // 789 = (7*100)+(8*10)+9;
     
     printf("O número invertido é %d", numNovo);
 
