@@ -15,7 +15,7 @@ int main()
         
         printf("%d tem 366 dias.\n", ano);
           
-    } else if (ano%4 != 0){
+    } else {
         
         printf("%d tem 365 dias.\n", ano);
     
