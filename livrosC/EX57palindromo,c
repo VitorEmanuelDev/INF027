@@ -1,0 +1,37 @@
+/*Números palíndromos são aqueles que escritos
+da direita para a esquerda ou da esquerda para
+a direita tem o mesmo valor. Ex.: 929, 44, 97379.
+Fazer um algoritmo que dado um número de 5 dígitos;
+calcular e escrever se este número é palíndromo.*/
+
+#include <stdio.h>
+
+int main()
+{
+    int num, dezenaMilhar, milhar, dezena, centena, unidade;
+    
+    printf("Informe um número de 5 dígitos.\n");
+    scanf("%d", &num);
+    
+    dezenaMilhar = num/10000;
+    milhar = (num%10000)/1000;
+    centena = (num%1000)/100;
+    dezena = (num%100)/10;
+    unidade = (num%10);
+
+    if(num < 10000 || num > 99999){
+        
+        printf("Número inválido. Tente novamente.\n");
+        
+    } else if(dezenaMilhar == unidade && milhar == dezena){
+        
+        printf("O número %d é um palíndromo.\n", num);
+        
+    } else {
+        
+        printf("O número %d não é palíndromo.\n", num);
+        
+    }
+
+    return 0;
+}
