@@ -14,13 +14,13 @@ int main()
     char operacao;
     int num1, num2, resultado;
     
+    printf("Qual operação deseja realizar?\n\n");
+    printf("Aperte '+' para adicionar\nAperte '-' para subtrair\nAperte 'x' para multiplicar\nAperte '/' para dividir.\n");
+    scanf("%c", &operacao);
+    
     printf("Informe dois números inteiros:\n");
     scanf("%d%d", &num1, &num2);
     
-    printf("Qual operação deseja realizar?\n");
-    printf("Aperte '+' para adicionar\nAperte '-' para subtrair\nAperte 'x' para multiplicar\nAperte '/' para dividir.");
-    scanf("%c", &operacao);    
-    
     if(operacao == '+'){
         
         resultado = num1 + num2;
@@ -41,29 +41,6 @@ int main()
     
     printf("%d %c %d = %d", num1, operacao, num2, resultado);
     
-    printf("Qual operação deseja realizar?\n");
-    printf("Aperte '+' para adicionar\nAperte '-' para subtrair\nAperte 'x' para multiplicar\nAperte '/' para dividir.\n");
-    scanf("%c", &operacao);    
-    
-    if(operacao == '+'){
-        
-        resultado = num1 + num2;
-        
-    } else if(operacao == '-'){
-        
-        resultado = num1 - num2;
-        
-    }else if(operacao == '/'){
-        
-        resultado = num1 / num2;
-        
-    }else if(operacao == 'x'){
-        
-        resultado = num1 * num2;
-        
-    }
-    
-    printf("%d %c %d = %d", num1, operacao, num2, resultado);
     return 0;
 }
 
