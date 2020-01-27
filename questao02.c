@@ -1,4 +1,6 @@
-/*A invenção do carro tornou muito mais rápido e mais barato
+/*  Questão 02 Prof. Luiz Machado
+
+A invenção do carro tornou muito mais rápido e mais barato
 realizar viagens de longa distância. Realizar uma viagem rodoviária
 tem dois tipos de custos: cada quilômetro percorrido na rodovia tem
 um custo associado (não só devido ao consumo de combustível mas também
