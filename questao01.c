@@ -27,15 +27,51 @@ int main()
     
     if(strcmp(porte, "pequeno") == 0){
         
-        idadeReal = idade * 5;
+        if(idade < 3){
+            
+            idadeReal = idade * 5;
+        
+        }else if(idade >= 3 || idade < 5){
+            
+            idadeReal = idade * 7;
+            
+        }else if(idade >= 5){
+            
+            idadeReal = (idade * 5) + 1;
+            
+        }
         
     }else if(strcmp(porte, "médio") == 0){
         
-        idadeReal = idade * 6;
+        if(idade < 3){
+            
+            idadeReal = idade * 6;
+        
+        }else if(idade >= 3 || idade < 5){
+            
+            idadeReal = (idade * 6) + 1;
+            
+        }else if(idade >= 5){
+            
+            idadeReal = (idade * 6) + 2;
+            
+        }
         
     }else if(strcmp(porte, "grande") == 0){
         
-        idadeReal = idade * 8;
+        if(idade < 3){
+            
+            idadeReal = idade * 8;
+        
+        }else if(idade >= 3 || idade < 5){
+            
+            idadeReal = (idade * 7) + 2;
+            
+        }else if(idade >= 5){
+            
+            idadeReal = (idade * 7) + 3;
+            
+        }
         
     }
 
