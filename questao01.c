@@ -1,4 +1,4 @@
-/*Questão 01 Lista Prof. Luiz Machado
+/*Questão 01 Prof. Luiz Machado
 
 Escreva um programa que receba como entrada a idade de um cão,
 em anos, e seu porte e exiba a sua idade humana correspondente.
