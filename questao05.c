@@ -1,4 +1,6 @@
-/*Ambrósio gosta muito de jogar videogame e como um jogador profissional,
+/* Questão 05 Prof. Luiz Machado
+
+Ambrósio gosta muito de jogar videogame e como um jogador profissional,
 ele resolveu criar uma relação entre o preço dos jogos e sua dificuldade.
 
 Ele descobriu que todos os anos os jogos ficam mais baratos, mas tem alguns
@@ -121,8 +123,5 @@ int main()
         
     }
 
-        
-    
-    
     return 0;
 }
