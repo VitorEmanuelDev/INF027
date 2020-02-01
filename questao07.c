@@ -3,7 +3,7 @@
 obs: enunciado com licença "poética"
 
 Depois de uma longa jornada de sefudência, Mario e Luigi chegaram
-à fortaleza onde encontra-se, a sempre perdida, princesa Peach, mas
+à fortaleza onde encontra-se a, sempre perdida, princesa Peach, mas
 antes de conseguirem finalmente resgatar a lazarenta, eles terão mais
 um desafio pela frente,um sacana feio como a d*sgraça chamado Bowser.
 
