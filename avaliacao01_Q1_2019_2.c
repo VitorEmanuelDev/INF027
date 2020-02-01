@@ -34,7 +34,7 @@ int main()
     
     //termino = pista - resto; // 12 - 2 = 10
     
-    resto = treinamento%12 // 34 % 12 = 10
+    termino = treinamento%pista; // 34 % 12 = 10
     
     printf("Término: %d metros", termino);
 
