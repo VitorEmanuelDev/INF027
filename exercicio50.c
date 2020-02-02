@@ -26,6 +26,13 @@ int main()
         
     }
     
+    for (contador = 1, aux = num - 1; contador < num; contador++, aux--){
+        
+        printf("\n%d %d", contador, aux);
+       
+        
+    }
+    
      /*num = sqrt((num + 1) * 2);  
     num = pow(num, 2);
     
@@ -35,15 +42,6 @@ int main()
         num = num + 9;
         
     }*/
-    
-    
-    
-    for (contador = 1, aux = num - 1; contador < num; contador++, aux--){
-        
-        printf("\n%d%d", contador, aux);
-       
-        
-    }
     
    /* for (contador = num; contador > 1; contador--){
         
