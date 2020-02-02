@@ -11,12 +11,11 @@ seguintes combinações:
 - 6 1
 
 */
-
 #include <stdio.h>
 #include <math.h>
 int main()
 {
-    int num, contador;
+    int num, contador, aux;
     
     printf("Informe um número.\n");
     scanf("%d", &num);
@@ -27,10 +26,10 @@ int main()
         
     }
     
-    /*num = sqrt((num + 1) * 2);  
+     /*num = sqrt((num + 1) * 2);  
     num = pow(num, 2);
     
-    for (contador = 1; contador < 7; contador++){
+   for (contador = 1; contador < 7; contador++){
         
         printf("%d\n", num);
         num = num + 9;
@@ -39,18 +38,19 @@ int main()
     
     
     
-    for (contador = 1; contador < num; contador++){
+    for (contador = 1, aux = num - 1; contador < num; contador++, aux--){
         
-        printf("%d\n", contador);
+        printf("\n%d%d", contador, aux);
+       
         
     }
     
-    for (contador = num; contador > 1; contador--){
+   /* for (contador = num; contador > 1; contador--){
         
         num = num - 1;
         printf("%d\n", num);
         
-    }
+    }*/
     
     
     return 0;
