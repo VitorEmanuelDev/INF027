@@ -38,7 +38,7 @@ int main()
     }*/
     
     
-    /*
+    
     for (contador = 1; contador < num; contador++){
         
         printf("%d\n", contador);
@@ -50,7 +50,7 @@ int main()
         num = num - 1;
         printf("%d\n", num);
         
-    }*/
+    }
     
     
     return 0;
