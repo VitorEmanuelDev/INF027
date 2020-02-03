@@ -9,14 +9,14 @@ sendo uma entrada do algoritmo).*/
 
 int main()
 {
-    float limite, contador, a = 1, b = 1, c;
+    int limite, contador, a = 1, b = 1, c;
     
     printf("Informe um número limite:\n");
-    scanf("%f", &limite);
+    scanf("%d", &limite);
 
     for (contador = 1; contador <= limite; contador++){
         
-        printf("%.0f\n", a);
+        printf("%d ", a);
         
         c = a + b;
         
