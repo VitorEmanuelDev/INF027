@@ -6,12 +6,12 @@ número é triangular quando é resultado do produto de três números consecuti
 #include <stdio.h>
 
 int main(){
-int numero, contador = 1, verificador, aux = 0;
+int numero, contador, verificador;
 
 printf("Informe um número inteiro:\n");
 scanf("%d", &numero);
 
-for (contador = 1; contador <= numero; contador++){
+for (contador = 0; contador <= numero; contador++){
 
     verificador = contador * (contador + 1) * (contador + 2);
     
