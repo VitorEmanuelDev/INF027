@@ -25,14 +25,12 @@ for (contador = 1; contador <= numero; contador++){
         printf("\n%d é um número triangular.\n", numero);
         break;
     
-        } else if (numero != verificador && resto == 0 && contador > 1){
+        } /*else if (numero != verificador && resto == 0 && contador > 1){
             
         printf("%d não é um número triangular.\n", numero);
         break;
             
-        }
-        
-    }
+        }*/
     
         return 0;
 }
