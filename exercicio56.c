@@ -24,14 +24,14 @@ int main()
         
         if (resto == 0 && divisor != numero){
             
-            //printf("%d ", divisor);
+            printf("%d ", divisor);
             soma += divisor;
             
         }
         
     }
     
-    //printf("%d", soma);
+    printf(" somados  = %d\n", soma);
 
     if (soma == numero){
         
