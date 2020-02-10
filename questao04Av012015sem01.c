@@ -26,7 +26,7 @@ int main()
     printf("Informe as duas idades em anos, meses e dias.\n");
     scanf("%d%d%d%d%d%d", &anos1, &meses1, &dias1, &anos2, &meses2, &dias2);
     
-    if (meses1 > 12 || meses2 > 12 || dias1 > 365 || dias2 > 365){
+    if (meses1 > 12 || meses2 > 12 || dias1 > 366 || dias2 > 366){
         
         printf("Número inválido.");
         
