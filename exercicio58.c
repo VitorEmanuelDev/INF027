@@ -20,6 +20,7 @@ scanf("%d", &numero);
 for( contador = 1; contador <= numero; contador++){
     
     fator *= contador;
+    //printf("%f ",fator);
     euler += 1/fator;
     
 }
