@@ -1,4 +1,4 @@
-/* Soma = 1 - (1/3³) + (1/5³) + (1/7³) + (1/9³) -... sendo Pi = raiz cubica de (Soma*32)
+/* Soma = 1 - (1/3³) + (1/5³) - (1/7³) + (1/9³) -... sendo Pi = raiz cubica de (Soma*32)
 
 faça um algoritmo e escreva o valor de Pi usando os 51 primeiros da série acima 
 
