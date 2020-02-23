@@ -1,6 +1,6 @@
 /* Soma = 1 - (1/3³) + (1/5³) - (1/7³) + (1/9³) -... sendo Pi = raiz cubica de (Soma*32)
 
-faça um algoritmo e escreva o valor de Pi usando os 51 primeiros da série acima 
+faça um algoritmo e escreva o valor de Pi usando os N primeiros da série acima 
 
 */
 
@@ -10,9 +10,12 @@ faça um algoritmo e escreva o valor de Pi usando os 51 primeiros da série acim
 int main()
 {
     float pi, soma = 0;
-    int divisor = 1, contador;
+    int divisor = 1, contador, N;
     
-    for (contador = 1; contador <= 51; contador++, divisor + 2){
+    printf("Informe um número N.\n");
+    scanf("%d", &N);
+    
+    for (contador = 1; contador <= N; contador++, divisor + 2){
         
         if (contador%2 == 0){
             
@@ -32,4 +35,6 @@ int main()
 
     return 0;
 }
+
+
 
