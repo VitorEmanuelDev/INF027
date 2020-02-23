@@ -9,13 +9,13 @@ faça um algoritmo e escreva o valor de Pi usando os N primeiros da série acima
 
 int main()
 {
-    float pi, soma = 0;
-    int divisor = 1, contador, N;
+    float pi, soma = 0, N;
+    int divisor = 1, contador;
     
     printf("Informe um número N.\n");
-    scanf("%d", &N);
+    scanf("%f", &N);
     
-    for (contador = 1; contador <= N; contador++, divisor + 2){
+    for (contador = 1; contador <= N; contador++, divisor += 2){
         
         if (contador%2 == 0){
             
@@ -35,6 +35,7 @@ int main()
 
     return 0;
 }
+
 
 
 
