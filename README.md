@@ -10,3 +10,5 @@ https://www.kelvinsantiago.com.br/exercicios-resolvidos-em-linguagem-c-lista-a/
 https://www.ime.usp.br/~elo/IntroducaoComputacao/
 
 http://linguagemc.com.br/
+
+https://www.youtube.com/user/IntellectualeTec/playlists
