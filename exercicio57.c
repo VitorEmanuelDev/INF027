@@ -6,7 +6,7 @@ usuário) termos, escreva um programa para calcular S para um número N.*/
 
 int main()
 {
-    int contador, numero = 2;
+    int contador, numero = 1;
     float soma, N, somaFinal;
     
     printf("Informe um número N.\n");
@@ -18,9 +18,8 @@ int main()
         
     }
     
-    somaFinal = 1 +soma;
-    
-    printf("%f", somaFinal);
+    printf("%f", soma);
 
     return 0;
 }
+
