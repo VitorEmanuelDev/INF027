@@ -5,7 +5,7 @@ são elementos do array. Imprima esta quantidade.*/
 
 int main()
 {
-     int i, array[10], soma = 0, contador = 0; 
+     int i, array[10], contador = 0; 
     
     for(i = 0; i <= 9; i++){
         
