@@ -148,7 +148,7 @@ int main()
             
         }
         
-    } else if (ano%400 != 0 && mes == 2){
+    } else if (mes == 0 && ano%400 != 0){
         
         diaSeguinte = dia + 1;
         
@@ -159,7 +159,7 @@ int main()
             
         }
         
-    } else if (ano%4 == 0){
+    } else if (mes == 2 && ano%4 == 0){
         
         diaSeguinte = dia + 1;
         
