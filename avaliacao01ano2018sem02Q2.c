@@ -6,36 +6,42 @@ direita do número original (como dígito verificador), e o número gerado deve 
 Por exemplo: Caso o número lido seja (999)10, o algoritmo deverá calcular a representação na
 base 7 deste número: (2625)7. Deve-se buscar o resto da divisão, da soma destes algarismos
 (2+6+2=5=15) por 7 (1). O número gerado com DV, será 9991. Apenas um número deve ser impresso
-como saída do algoritmo.   Escreva um algoritmo em C, que  realize a geração do número com DV
+como saída do algoritmo. Escreva um algoritmo em C, que  realize a geração do número com DV
 de acordo com as regras apresentadas. */
 
 
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
-    int numero, baseSete, i, verificador, soma = 0;
+    int numero, baseSete, i, verificador, soma = 0, somaSete = 0, numeroSete, faker;
     
     printf("Informe um número de 0 a 999 na base decimal.\n");
     scanf("%d", &numero);
     
-    for(i = 1; numero > 0; i++){
+    faker = numero;
+    
+    for(i = 0; faker > 0; i++){
         
-        baseSete = numero%7;
+        
+        baseSete = faker%7;
         //printf("%d", baseSete);
-        numero = numero/7;
+        faker = faker/7;
         soma += baseSete;
-        
-        for(){
-            
-            
-            
-        }
+        //somaSete += baseSete * pow(10, i);
         
     }
     
     verificador = soma%7;
-    printf("%d", verificador);
+    //numeroSete = (somaSeteo * 10) + verificador;
+    numeroSete = (numero * 10) + verificador;
+    
+    //printf("%d", somaSete);
+    printf("%d", numeroSete);
 
     return 0;
 }
+
+
+
