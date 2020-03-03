@@ -10,7 +10,7 @@ inteiro.*/
 
 int main()
 {
-    int numero, i, subtracao = 0, contador = 0;
+    int numero, i, contador = 0;
     
     printf("Informe um número");
     scanf("%d", &numero);
