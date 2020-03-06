@@ -1,17 +1,10 @@
-/******************************************************************************
 
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
-    int horario, horarioNovo, resto, minutos, verifica;
+    int horario, horarioNovo = 0, resto, minutos, verifica;
     
     printf("Informe um horário.\n");
     scanf("%d", &horario);
@@ -34,7 +27,7 @@ int main()
         
         horarioNovo = (horario * 10) + 1;
         
-    } /*else if( horario >= 1300 || horario <= 2359){
+    } else if( horario >= 1300 && horario <= 2359){
         
         resto = horario%100;
         minutos = (resto * 10) + 1;
@@ -85,9 +78,10 @@ int main()
             
             horarioNovo = 11000 + minutos;
             
-        }*/
+        }
         
-
+    }
+        
       printf("%d", horarioNovo);
     
 }
