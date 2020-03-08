@@ -28,7 +28,7 @@ int main()
         
     }
     
-    menor = array[i];
+    menor = array[0];
     
     for(i = 0; i < 20; i++){
      
@@ -45,3 +45,4 @@ int main()
 
     return 0;
 }
+
