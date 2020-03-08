@@ -1,34 +1,45 @@
 /*
-
 Escreva um programa que leia dois vetores de números reais de mesma dimensão (10
 posições), e imprima o vetor resultante da soma destes vetores.
-
 */
+
 #include <stdio.h>
 
 int main()
 {
-    int vetor1[10], vetor2[10], vet3[20], i;
+    int i, array1[10], array2[10], array3[10];
     
-    for(i = 0; i <= 9; i++){
+    printf("Informe dez valores para o primeiro array.\n");
+    
+    for(i = 0; i < 10; i++){
         
-        vetor1[i] = i;
-        //printf("\n%d", vetor1[i]);
+        scanf("%d", &array1[i]);
         
     }
     
-    for(i = 10; i <= 19; i++){
+    printf("Informe dez valores para o segundo array.\n");
+    
+    for(i = 0; i < 10; i++){
         
-        vetor2[i] = i;
-        //printf("\n%d", vetor2[i]);
+        scanf("%d", &array2[i]);
         
     }
     
-    for(i = 0; i <= 19; i++){
+    for(i = 0; i < 10; i++){
         
-        
+        array3[i] = array1[i] + array2[i];
         
     }
-
+    
+    printf("Soma dos dois arrays.\n");
+    
+    for(i = 0; i < 10; i++){
+        
+        printf("%d ", array3[i]);
+        
+    }
+    
     return 0;
 }
+
+
