@@ -7,13 +7,14 @@ posições), e imprima o vetor resultante da soma destes vetores.
 
 int main()
 {
-    int i, array1[10], array2[10], array3[10];
+    int i;
+    float array1[10], array2[10], array3[10];
     
     printf("Informe dez valores para o primeiro array.\n");
     
     for(i = 0; i < 10; i++){
         
-        scanf("%d", &array1[i]);
+        scanf("%f", &array1[i]);
         
     }
     
@@ -21,7 +22,7 @@ int main()
     
     for(i = 0; i < 10; i++){
         
-        scanf("%d", &array2[i]);
+        scanf("%f", &array2[i]);
         
     }
     
@@ -31,11 +32,11 @@ int main()
         
     }
     
-    printf("Soma dos dois arrays.\n");
+    printf("Soma dos dois arrays é.\n");
     
     for(i = 0; i < 10; i++){
         
-        printf("%d ", array3[i]);
+        printf("%.0f ", array3[i]);
         
     }
     
