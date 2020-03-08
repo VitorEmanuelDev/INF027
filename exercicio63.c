@@ -10,19 +10,21 @@ int main()
     int i;
     float array1[10], array2[10], array3[10];
     
-    printf("Informe dez valores para o primeiro array.\n");
+    //printf("Informe dez valores para o primeiro array.\n");
     
     for(i = 0; i < 10; i++){
         
-        scanf("%f", &array1[i]);
+        //scanf("%f", &array1[i]);
+        array1[i] = i;
         
     }
     
-    printf("Informe dez valores para o segundo array.\n");
+    //printf("Informe dez valores para o segundo array.\n");
     
     for(i = 0; i < 10; i++){
         
-        scanf("%f", &array2[i]);
+        //scanf("%f", &array2[i]);
+        array2[i] = i;
         
     }
     
@@ -42,5 +44,3 @@ int main()
     
     return 0;
 }
-
-
