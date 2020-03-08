@@ -7,7 +7,7 @@ int main()
 {
     int i, array[20], menor, maior, posMaior, posMenor;
     
-    printf("Informe os valores de cada elemento do array.\n");
+    //printf("Informe os valores de cada elemento do array.\n");
     
     for(i = 0; i < 20; i++){
         
