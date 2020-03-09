@@ -6,21 +6,21 @@ no vetor.*/
 
 int main()
 {
-    int array[5] = {4,5,6,7,8}, i, numero, contador;
+    int array[15] = {8,4,5,6,7,8,0,1,2,3,9,9,6,3,0}, i, numero, contador;
     
     printf("Informe um número.\n");
     scanf("%d", &numero);
     
     //printf("Informe os valores dos quinze elementos do array.\n");
     
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < 15; i++){
         
         //scanf("%d", &array[i]);
         array[i];
         
     }
 
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < 15; i++){
         
         //printf("%d", array[i]);
         if(numero == array[i]){
