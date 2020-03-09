@@ -12,3 +12,5 @@ https://www.ime.usp.br/~elo/IntroducaoComputacao/
 http://linguagemc.com.br/
 
 https://www.youtube.com/user/IntellectualeTec/playlists
+
+http://wiki.icmc.usp.br/images/5/55/Aula_busca.pdf
