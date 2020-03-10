@@ -9,8 +9,8 @@ c. A média
 
 int main()
 {
-    int i, j, mediana, moda, contador, array[] = {8,1,2,3,9,5,6,7,8,9,10,12,15,15,18,19,20,11,17,18};
-    float media, soma = 0;
+    int i, j, moda, contador, array[] = {8,1,2,3,9,5,6,7,8,9,10,12,15,15,18,19,20,11,17,18};
+    float media, soma = 0, mediana;
     
     
     for(i = 0; i < 20; i++){
@@ -35,10 +35,12 @@ int main()
     media = soma/20;
     printf("Média: %.2f\n", media);
     
-    mediana = (array[9] + array[10])/2;
-    printf("Mediana: %d\n", mediana);
+    mediana = (array[9] + array[10])/2.0;
+    printf("Mediana: %.2f\n", mediana);
     
     printf("Moda: %d", moda);
-  
+    
+    
+    
     return 0;
 }
