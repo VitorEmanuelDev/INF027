@@ -9,7 +9,7 @@ ou -1 caso o valor não ocorra no vetor (Busca sequencial).
 
 int main()
 {
-    int numero, valor, i, array[10] = {89 , 45, 23, 24 ,82 , 10 , 88 , 66 , 99 , 0};
+    int numero, valor, i, array[10] = {89 , 45, 23, 24 ,82 , 10 , 88 , 66 , 99 , 88};
     
     printf("Informe o número a ser procurado:\n");
     scanf("%d", &numero);
@@ -20,13 +20,19 @@ int main()
         
         if(array[i] == numero){
             
-            valor = i;  
+            valor = i;
+            printf("A primeira posição em que %d ocorre no array é no índice %d.", numero, valor);
+            break;
             
         }
         
     }
     
-    printf("%d", valor);
+    if(valor == -1){
+        
+        printf("O número %d não consta no array.", numero);
+        
+    }
 
     return 0;
 }
