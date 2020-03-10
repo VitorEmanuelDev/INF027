@@ -9,38 +9,63 @@ c. A média
 
 int main()
 {
-    int i, j, moda, contador, array[] = {8,1,2,3,9,5,6,7,8,9,10,12,15,15,18,19,20,11,17,18};
+    int i, j, moda, armazena, contador = 0, array[] = {18,19,112,12,12,15,16,9,8,9,19,12,1,15,18,20,20,11,12,18};
     float media, soma = 0, mediana;
     
+    //ordenar array
+    for(i = 0; i < TAM_ARRAY; i++){
+        
+       for(j = i + 1; j < TAM_ARRAY; j++){
+           
+           if(array[i] > array[j]){
+               
+                armazena = array[i];
+                array[i] = array[j];
+                array[j] = armazena;
+               
+           }
+           
+       }
+        
+    }
     
-    for(i = 0; i < 20; i++){
+    //somar os valores do array
+    for(i = 0; i < TAM_ARRAY; i++){
         
         soma += array[i];
         //printf("%d ", soma);
         
     }
     
-    for (i =  0; i < 20; i++){
+    //determinar a moda do array
+    for (i =  0; i < TAM_ARRAY; i++){
         
-        for(j = 0; j < 20; j++){
+        for(j = 0; j < TAM_ARRAY; j++){
             
-            if(array[i] == array[i + 1]){
-                
-                moda = array[i];
-                
-            }
+            
+            
         }
+        
     }
+
+    //calculo da mediana
+    if(TAM_ARRAY%2 == 0){
+        
+        mediana = array[TAM_ARRAY/2] + array[(TAM_ARRAY/2) - 1];
+        
+    } else{ 
+        
+        mediana = array[TAM_ARRAY/2] + 1;
+        
+    }
+    
     
     media = soma/20;
     printf("Média: %.2f\n", media);
     
-    mediana = (array[9] + array[10])/2.0;
     printf("Mediana: %.2f\n", mediana);
     
-    printf("Moda: %d", moda);
-    
-    
+    //printf("Moda: %d", moda);
     
     return 0;
 }
