@@ -5,10 +5,13 @@ b. A mediana dos elementos no array (elemento central)
 c. A média
 */
 #include <stdio.h>
+#define TAM_ARRAY 20
 
 int main()
 {
-    int i, j, soma = 0, media, mediana, moda, contador, array[] = {0,1,2,3,4,5,6,7,8,9,10,12,15,15,18,19,20,11,13,18};
+    int i, j, mediana, moda, contador, array[] = {8,1,2,3,9,5,6,7,8,9,10,12,15,15,18,19,20,11,17,18};
+    float media, soma = 0;
+    
     
     for(i = 0; i < 20; i++){
         
@@ -30,12 +33,12 @@ int main()
     }
     
     media = soma/20;
-    printf("Média: %d\n", media);
+    printf("Média: %.2f\n", media);
     
     mediana = (array[9] + array[10])/2;
     printf("Mediana: %d\n", mediana);
     
     printf("Moda: %d", moda);
-    
+  
     return 0;
 }
