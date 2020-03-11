@@ -10,26 +10,26 @@ vetor (Busca Binária).*/
 int main()
 {
     
-    int i, valorMenor = 0, valorMaior = 10, array[] ={0,1,2,3,4,5,6,7,8,9}, elemento, posicao = -1;
+    int i, meio, valorMenor = 0, valorMaior = 10, array[] ={0,1,2,3,4,5,6,7,8,9}, elemento, posicao = -1;
     
     printf("informe um número:\n");
     scanf("%d", &elemento);
     
     for(i = 0; valorMenor <= valorMaior && posicao == -1; i++){
         
-        i = ((valorMaior - valorMenor)/2) + valorMenor;
+        meio = ((valorMaior - valorMenor)/2) + valorMenor;
         
-        if(elemento == array[i]){
+        if(elemento == array[meio]){
             
-            posicao = i + 1;
+            posicao = meio + 1;
             
-        } else if(array[i] < elemento){
+        } else if(array[meio] < elemento){
             
-            valorMenor = i + 1;
+            valorMenor = meio + 1;
             
         } else {
             
-            valorMaior = i - 1;
+            valorMaior = meio - 1;
             
         }
         
