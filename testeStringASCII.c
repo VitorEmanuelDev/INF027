@@ -1,12 +1,16 @@
+/*Faça um programa em C que coloque uma palavra informada pelo usuário em letras maiúsculas*/
+
 #include <stdio.h>
 #include <string.h>
+#define TAM_ARRAY 100
+
  int main()
  {
-     char string[100];
+     char string[TAM_ARRAY];
      int i = 0;
 
     puts("Informe uma palavra:\n"); 
-    fgets(string,100,stdin);
+    fgets(string,TAM_ARRAY,stdin);
 
     for(i = 0; string[i] != '\0'; i++){
         
