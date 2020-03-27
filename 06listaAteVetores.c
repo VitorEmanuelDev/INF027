@@ -28,7 +28,7 @@ int main()
         
     }
 
-    if(numero != str[i]){
+    if(numero != array[i]){
         
         printf("O número informado não existe");
         
