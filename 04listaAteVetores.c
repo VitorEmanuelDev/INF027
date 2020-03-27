@@ -34,24 +34,18 @@ int main()
             
             pessoa50Menos60++;
             
-        }
-        
-        if(altura < 150){
+        } else if(altura < 150){
             
             pessoaMenos150++;
             IdadeMenos150 += idade;
             mediaMenos150 = IdadeMenos150/pessoaMenos150;
             
-        }
-        
-        if(olhos == 'A'){
+        } else if(olhos == 'A'){
             
             olhosAzuis++;
             mediaOlhosAzuis = (olhosAzuis/pessoas) * 100;
             
-        }
-        
-        if(olhos == 'A' && cabelos == 'R'){
+        } else if(olhos == 'A' && cabelos == 'R'){
             
             ruivaNaoAzul++;
             
