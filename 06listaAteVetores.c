@@ -9,7 +9,7 @@ existir, imprimir MSG que não existe.*/
 
 int main()
 {
-    char str[TAM_ARRAY];
+    char array[TAM_ARRAY];
     int numero, i;
     
     printf("Informe um número a ser buscado.\n");
@@ -17,9 +17,9 @@ int main()
     
     for(i = 0; i < TAM_ARRAY; i++){
         
-        str[i] = rand() % 9;
+        array[i] = rand() % 9;
         
-        if(numero == str[i]){
+        if(numero == array[i]){
             
             printf("Posição: %d", i);
             break;
