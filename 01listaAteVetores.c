@@ -1,4 +1,4 @@
-/*Faça um programa que apresente o menu de opções a seguir:
+/*1-Faça um programa que apresente o menu de opções a seguir:
 
 Menu de opções:
 1. Média aritmética
