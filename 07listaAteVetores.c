@@ -2,8 +2,6 @@
 números de 10 a 19. Somar os vetores acima.*/
 
 #include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
 
 int main()
 {
@@ -19,7 +17,7 @@ int main()
  
  for(i = 0; i <= 9; i++){
  
-    printf("%d ", array[i]);
+   // printf("%d ", array[i]);
     
  }
 
@@ -31,7 +29,7 @@ int main()
  
  for(i = 0; i <= 9; i++){
 
-    printf("%d ",vetor[i]);
+   // printf("%d ",vetor[i]);
     
  }
  
