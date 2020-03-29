@@ -14,3 +14,5 @@ http://linguagemc.com.br/
 https://www.youtube.com/user/IntellectualeTec/playlists
 
 http://wiki.icmc.usp.br/images/5/55/Aula_busca.pdf
+
+https://www.youtube.com/watch?v=9-ubSA9GA3o
