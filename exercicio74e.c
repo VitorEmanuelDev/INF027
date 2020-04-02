@@ -13,7 +13,7 @@ e. Gerar um novo array sem duplicidades a partir deste array*/
 
 int main()
 {
-    int i, j, k, array[TAM_ARRAY] = {0,4,5,7,8,9,6,3,2,1,4,5,8,9,7,6,5,3,4,8,7,9,8,5,2,4,1,0,3,0};
+    int i, j, k = 0, array[TAM_ARRAY] = {0,4,5,7,8,9,6,3,2,1,4,5,8,9,7,6,5,3,4,8,7,9,8,5,2,4,1,0,3,0};
     int final, posInsert, posRemove, igual;
     int contador = 0, armazena = 0, tamanho = 0, arrayNovo[] = {};
 
