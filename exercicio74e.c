@@ -36,7 +36,7 @@ int main()
                     array[k] = array[k + 1];
                 }
 
-                TAM_ARRAY--;//diminuir o tamanho da lista depois de jogar o elemento repetido no array fantasm
+                TAM_ARRAY--;//diminuir o tamanho da lista depois de jogar o elemento repetido no array fantasma
 
                 j--;//não incrementar o j se houver troca. senão pode ocorrer de um elemento repetido ser pulado
             }
@@ -50,8 +50,6 @@ int main()
         printf("%d ", array[i]);
         
     }
-
-    
     
     return 0;
 }
