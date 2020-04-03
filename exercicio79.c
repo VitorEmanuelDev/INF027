@@ -16,7 +16,7 @@ int main(){
    printf("Informe a posição da palavra que deseja extrair:\n");
    scanf("%d", &inicio);
      
-   printf("Informe o tamanho da palavra que deseja extrair:\n");
+   printf("Informe quantas letras a palavra que deseja extrair tem:\n");
    scanf("%d",&fim);
    
  
@@ -32,5 +32,6 @@ int main(){
    
    return 0;
 }
+
 
 
