@@ -16,22 +16,31 @@ depois declaro um array para cada situação...
 
 #include <stdio.h>
 #include <stdlib.h>
-#define TAM_ARRAY 30
 
 int main()
 {
-    int i, j, k, array[TAM_ARRAY] = {0,4,5,7,8,9,6,3,2,1,4,5,8,9,7,6,5,3,4,8,7,9,8,5,2,4,1,0,3,0};
+    int TAM_ARRAY = 30, i, j, k, array[TAM_ARRAY];
     int final, posInsert, posRemove, igual;
-    int contador = 0, armazena = 0, tamanho = 0, arrayNovo[] = {};
+    int contador = 0, armazena = 0, continuar = 0;
     
     //a. Inserir um elemento no final do vetor
     
-    printf("Informe um elemento.\n");
+    for(i = 0; i <= TAM_ARRAY; i++){
+	    
+	    array[i] = rand() % 30;
+	    printf("%d ", array[i]);
+	    
+	}
+    
+    printf("\nInforme o novo elemento final.\n");
     scanf("%d", &final);
     
     array[TAM_ARRAY] = final;
     
-    printf("%d", array[TAM_ARRAY]);
+    for(i = 0; i <= TAM_ARRAY; i++){
+        
+        printf("%d ", array[i]);
+    }
     
     //b. Inserir um elemento em uma dada posição
     
@@ -46,7 +55,7 @@ int main()
     
     array[i] = posInsert;
     
-    for(i = 0; i < TAM_ARRAY; i++){
+    for(i = 0; i <= TAM_ARRAY; i++){
     
     printf("%d ", array[i]);
     
@@ -54,7 +63,7 @@ int main()
     
     //c. Remover um elemento de uma posição indicada
     
-    printf("\nInforme uma posição para deletar o elemento que ela contém.\n");
+    printf("\nInforme uma posição a ser deletada.\n");
     scanf("%d", &posRemove);
     
     
@@ -65,7 +74,7 @@ int main()
     }
     
     
-    for(i = 0; i < TAM_ARRAY - 1; i++){
+    for(i = 0; i <= TAM_ARRAY - 1; i++){
         
         printf("%d ", array[i]);    
         
@@ -73,33 +82,27 @@ int main()
     
     //d. Remover todos elementos iguais a um valor indicado
     
-    printf("\nInforme um valor que queira deletar do array.\n");
+    printf("\nInforme um valor a ser deletado do array\n");
     scanf("%d", &igual);
     
     for(i = 0; i < TAM_ARRAY; i++){
         
-        for(j = i + 1; j < TAM_ARRAY; j++){
+        if(array[i] == igual){
             
-            if(array[i] > array[j]){
-               
-                armazena = array[i];
-                array[i] = array[j];
-                array[j] = armazena;
-               
-                if(array[i] == igual){
+            for(k = i; k < TAM_ARRAY; k++){
                 
-                    array[i] = array[i + 1];
-                    contador++;
-                
-                }
-               
+                array[k] = array[k + 1];
             }
+            
+            TAM_ARRAY--;//diminuir o tamanho da lista depois de jogar o elemento repetido no array fantasm
+            
+            i--;//não incrementar o j se houver troca. senão pode ocorrer de um elemento repetido ser pulado
             
         }
         
     }
     
-    for(i = 0; i < TAM_ARRAY - contador; i++){
+    for(i = 0; i <= TAM_ARRAY; i++){
         
         printf("%d ", array[i]);    
         
@@ -107,46 +110,45 @@ int main()
     
     //e. Gerar um novo array sem duplicidades a partir deste array
     
-    printf("\nArray sem duplicidades:\n");
+    printf("\nAperte '1' para ver um array sem elementos duplicados.\n");
+    scanf("%d", &continuar);
+    
+    TAM_ARRAY = 30;
+    
+    for(i = 0; i <= TAM_ARRAY; i++){
+	    
+	    array[i] = rand() % 30;
+	    
+	}
     
     for(i = 0; i < TAM_ARRAY; i++){
         
         for(j = i + 1; j < TAM_ARRAY; j++){
             
-            if(array[i] > array[j]){
+            if(array[i] == array[j]){
                 
-                armazena = array[i];
-                array[i] = array[j];
-                array[j] = armazena;
-              
-               
+                for(k = j; k < TAM_ARRAY; k++){
+                    
+                    array[k] = array[k + 1];
+                    
+                }
+
+                TAM_ARRAY--;//diminuir o tamanho da lista depois de jogar o elemento repetido no array fantasm
+
+                j--;//não incrementar o j se houver troca. senão pode ocorrer de um elemento repetido ser pulado
             }
-            
         }
+    }
+
+
+    for(i = 0; i < TAM_ARRAY; i++){
+        
+        printf("%d ", array[i]);
         
     }
-    
-    for(j = 0; j < TAM_ARRAY - 1; j++){
-        
-        //printf("%d ", array[i]);
-        if(array[j] != array[j + 1]){
-            
-            arrayNovo[k] = array[j];
-            k++;
-            tamanho++;
-        }
-        
-    }
-    
-    arrayNovo[k] = arrayNovo[tamanho];
-    
-    for(k = 1; k < tamanho; k++){
-        
-        printf("%d ", arrayNovo[k]);
-        
-    }
-    
+
     
     return 0;
 }
+
 
