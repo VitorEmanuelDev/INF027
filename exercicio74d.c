@@ -9,43 +9,41 @@ e. Gerar um novo array sem duplicidades a partir deste array*/
 
 #include <stdio.h>
 #include <stdlib.h>
-#define TAM_ARRAY 30
 
 int main()
 {
-    int i, j, k, array[TAM_ARRAY] = {0,4,5,7,8,9,6,3,2,1,4,5,8,9,7,6,5,3,4,8,7,9,8,5,2,4,1,0,3,0};
+    int TAM_ARRAY = 30, i, j, k, array[TAM_ARRAY];
     int final, posInsert, posRemove, igual;
-    int contador = 0, armazena = 0, tamanho = 0, arrayNovo[] = {};
-
-//d. Remover todos elementos iguais a um valor indicado
+    int continuar = 0;
     
-    printf("\nInforme um valor que queira deletar do array.\n");
+    for(i = 0; i <= TAM_ARRAY; i++){
+	    
+	    array[i] = rand() % 30;
+	    printf("%d ", array[i]);
+	    
+	}
+
+    printf("\nInforme um valor a ser deletado do array\n");
     scanf("%d", &igual);
     
     for(i = 0; i < TAM_ARRAY; i++){
         
-        for(j = i + 1; j < TAM_ARRAY; j++){
+        if(array[i] == igual){
             
-            if(array[i] > array[j]){
-               
-                armazena = array[i];
-                array[i] = array[j];
-                array[j] = armazena;
-               
-                if(array[i] == igual){
+            for(k = i; k < TAM_ARRAY; k++){
                 
-                    array[i] = array[i + 1];
-                    contador++;
-                
-                }
-               
+                array[k] = array[k + 1];
             }
+            
+            TAM_ARRAY--;//diminuir o tamanho da lista depois de jogar o elemento repetido no array fantasm
+            
+            i--;//não incrementar o j se houver troca. senão pode ocorrer de um elemento repetido ser pulado
             
         }
         
     }
     
-    for(i = 0; i < TAM_ARRAY - contador; i++){
+    for(i = 0; i <= TAM_ARRAY; i++){
         
         printf("%d ", array[i]);    
         
