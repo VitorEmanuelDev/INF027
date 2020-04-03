@@ -24,12 +24,11 @@ ENTRADA
 */
 #include <stdlib.h>
 #include <stdio.h>
-#define TAM_LISTA 50
 #include <math.h>
 
 int main()
 {
-    int i, j, k = 0, elementos = 0, auxiliar = 0, lista[TAM_LISTA], armazena = 0, tamanho = 0, listaNova[] = {};
+    int TAM_LISTA = 50, i, j, k, elementos = 0, lista[TAM_LISTA];
     
     elementos = sizeof(lista)/sizeof(int);
 	
@@ -45,38 +44,27 @@ int main()
         
         for(j = i + 1; j < TAM_LISTA; j++){
          
-            if(lista[i] > lista[j]){
-               
-               auxiliar = lista[i];
-               lista[i] = lista[j];
-               lista[j] = auxiliar;
+            if(lista[i] == lista[j]){
                 
-            } 
-            
+                for(k = j; k < TAM_LISTA; k++){
+                    
+                    lista[k] = lista[k + 1];
+                }
+
+                TAM_LISTA--;//diminuir o tamanho da lista depois de jogar o elemento repetido no array fantasm
+
+                j--;//não incrementar o j se houver troca. senão pode ocorrer de um elemento repetido ser pulado
+            }
         }
-    
     }
-    
-    for(j = 0; j < TAM_LISTA - 1; j++){
+
+
+    printf("\nLista de presença atualizada: ");
+    for(i = 0; i < TAM_LISTA; i++){
         
-        //printf("%d ", lista[j]);
-        if(lista[j] != lista[j+1]){
-            
-            listaNova[k] = lista[j];
-            k++;
-            tamanho++;
-        }
+        printf("%d ", lista[i]);
         
     }
-    
-    listaNova[k] = listaNova[tamanho];
-    
-    for(k = 1; k < tamanho; k++){
-        
-        printf("%d ", listaNova[k]);
-        
-    }
-    
 
     return 0;
 }
