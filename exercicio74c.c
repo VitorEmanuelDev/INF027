@@ -16,6 +16,13 @@ int main()
     int TAM_ARRAY = 30, i, j, k, array[TAM_ARRAY];
     int final, posInsert, posRemove, igual;
     int continuar = 0;
+    
+    for(i = 0; i <= TAM_ARRAY; i++){
+	    
+	    array[i] = rand() % 30;
+	    printf("%d ", array[i]);
+	    
+	}
 
     //c. Remover um elemento de uma posição indicada
     
