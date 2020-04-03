@@ -110,16 +110,8 @@ int main()
     
     //e. Gerar um novo array sem duplicidades a partir deste array
     
-    printf("\nAperte '1' para ver um array sem elementos duplicados.\n");
+    printf("\nAperte '1' para ver o array sem elementos duplicados.\n");
     scanf("%d", &continuar);
-    
-    TAM_ARRAY = 30;
-    
-    for(i = 0; i <= TAM_ARRAY; i++){
-	    
-	    array[i] = rand() % 30;
-	    
-	}
     
     for(i = 0; i < TAM_ARRAY; i++){
         
