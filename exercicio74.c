@@ -21,7 +21,7 @@ int main()
 {
     int TAM_ARRAY = 30, i, j, k, array[TAM_ARRAY];
     int final, posInsert, posRemove, igual;
-    int contador = 0, armazena = 0, continuar = 0;
+    int continuar = 0;
     
     //a. Inserir um elemento no final do vetor
     
