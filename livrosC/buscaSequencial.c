@@ -7,8 +7,6 @@
 int main()
 {
     int i, valor, array[30];
-
-    
     
     for(i = 0; i <= 30; i++){
         
