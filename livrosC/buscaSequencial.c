@@ -17,7 +17,7 @@ int main()
         
     }
     
-    printf("\nQual número do array deseja eliminar?\n");
+    printf("\nQual valor do array deseja mostrar?\n");
     scanf("%d", &valor);
     
     for(i = 0; i <= 30; i++){
