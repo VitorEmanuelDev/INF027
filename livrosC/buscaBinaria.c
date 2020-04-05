@@ -5,18 +5,18 @@
 
 int main()
 {
-    int i, j, valor, array[30], armazena = 0;
+    int i, j, tamanho = 30, inicio, meio, valor, array[tamanho], armazena = 0;
     
-    for(i = 0; i <= 30; i++){
+    for(i = 0; i <= tamanho; i++){
         
         array[i] = rand() % 99;
         //printf("%d ", array[i]);
         
     }
     
-    for(i = 0; i < 30; i++){
+    for(i = 0; i < tamanho; i++){
         
-        for(j = i + 1; j < 30; j++){
+        for(j = i + 1; j < tamanho; j++){
         
             if(array[i] > array[j]){
                
@@ -30,15 +30,41 @@ int main()
         
     }
     
-    for(i = 0; i < 30; i++){
+    for(i = 0; i < tamanho; i++){
         
         printf("%d ", array[i]);
         
     }
     
     
-    //printf("\nQual valor do array deseja mostrar?\n");
-    //scanf("%d", &valor); 
+   printf("\nQual valor do array deseja mostrar?\n");
+   scanf("%d", &valor); 
+   
+   meio = 0;
+   inicio = 0;
+   
+   for(i = 0; inicio <= tamanho; i++){
+       
+        meio = (inicio + tamanho)/2;
+       
+        if (valor < array[meio]){
+           
+            tamanho = meio - 1;
 
+           
+        } else if (valor > array[meio]){
+             
+            inicio = meio + 1;
+    
+        } else if (valor == array[i]){
+         
+            printf("Valor %d encontrado na posição %d.", array[i], i);
+            break;
+         
+        }
+       
+   }
+   
     return 0;
 }
+
