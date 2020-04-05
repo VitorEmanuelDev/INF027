@@ -29,7 +29,7 @@ int main()
             
         } else if (elemento == array[meio]){
             
-            printf("O número %d está no índice %d.", elemento, array[meio] + 1);
+            printf("O número %d está no índice %d.", elemento, array[meio]);
             break;
             
         } 
@@ -40,3 +40,4 @@ int main()
     
 }
     
+
