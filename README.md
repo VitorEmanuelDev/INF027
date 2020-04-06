@@ -1,20 +1,20 @@
 # inf027
-Exercícios de lógica de programação - inf027
+Exercícios de lógica de programação - inf027 
 
-https://www.onlinegdb.com/
+Editor: https://www.onlinegdb.com/
 
-http://www.pythontutor.com/visualize.html#mode=edit
+Visualizador: http://www.pythontutor.com/visualize.html#mode=edit
 
-https://www.kelvinsantiago.com.br/exercicios-resolvidos-em-linguagem-c-lista-a/
+Lista de um tal de Kelvin: https://www.kelvinsantiago.com.br/exercicios-resolvidos-em-linguagem-c-lista-a/
 
-https://www.ime.usp.br/~elo/IntroducaoComputacao/
+Material de estudo 1: https://www.ime.usp.br/~elo/IntroducaoComputacao/
 
-http://linguagemc.com.br/
+Material de estudo 2: http://linguagemc.com.br/
 
-https://www.youtube.com/user/IntellectualeTec/playlists
+Canal legal: https://www.youtube.com/user/IntellectualeTec/playlists
 
-http://wiki.icmc.usp.br/images/5/55/Aula_busca.pdf
+Aula sobre buscas: http://wiki.icmc.usp.br/images/5/55/Aula_busca.pdf
 
-https://www.youtube.com/watch?v=9-ubSA9GA3o
+Curso introdutório: https://www.youtube.com/watch?v=9-ubSA9GA3o
 
-https://www.ime.usp.br/~pf/algoritmos/index.html
+Material de estudo 3: https://www.ime.usp.br/~pf/algoritmos/index.html
