@@ -7,7 +7,38 @@ congruente modulo m a j*, onde i*<= i e j*<= j.*/
 
 int main()
 {
+    int i, j, I, J, m;
     
+    printf("Informe um número I:\n");
+    scanf("%d", &I);
+    
+    
+    printf("Informe um número J:\n");
+    
+    scanf("%d", &J);
+    
+    
+    printf("Informe um número m:\n");
+    scanf("%d", &m);
+    
+        
+        for (i = I; I >= 0; I--){
+       
+            for (j = J; J >= 0; J--){
+           
+                if((J % m == I % m) && J != I && J / m != 0 && I / m != 0){
+                 
+                    printf("[%d;%d] ", J, I);
+                    
+                }
+       
+            }
+       
+        }
+		
+	    		
+        
 
     return 0;
 }
+
