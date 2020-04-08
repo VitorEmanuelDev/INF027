@@ -26,7 +26,7 @@ int main()
        
             for (j = J; J >= 0; J--){
            
-                if((J % m == I % m) && J != I && J / m != 0 && I / m != 0){
+                if(J % m == I % m){
                  
                     printf("[%d;%d] ", J, I);
                     
@@ -36,8 +36,6 @@ int main()
        
         }
 		
-	    		
-        
 
     return 0;
 }
