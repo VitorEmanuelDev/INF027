@@ -3,7 +3,6 @@ segunda.*/
 
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h> 
 #define TAM_ARRAY 100
 
 int main()
