@@ -23,13 +23,13 @@ int main()
 {
     int i, soma = 0, salas[50];
     
-    for(i = 0; i < 9; i++){
+    for(i = 0; i <= 9; i++){
         
-        salas[i] = rand() % 12;
+        salas[i] = rand() % 9;
         
     }
     
-    for(i = 0; i < 9; i+=3){
+    for(i = 0; i <= 9; i+=2){
         
         salas[i] *= -1;
         
@@ -37,19 +37,18 @@ int main()
     
     printf("\nVidas por sala.\n");
     
-    for(i = 0; i < 9; i++){
+    for(i = 0; i <= 9; i++){
         
         printf("%d ", salas[i]);
-        soma += salas[i];
         
     }
     
     printf("\nVidas acumuladas por sala.\n");
     
-    for(i = 0; i < 9; i++){
+    for(i = 0; i <= 9; i++){
         
-        printf("%d ", soma);
         soma += salas[i];
+        printf("%d ", soma);
         
     }
         
