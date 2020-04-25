@@ -3,39 +3,28 @@ segunda.*/
 
 #include <stdio.h>
 #include <string.h>
-#define TAM_ARRAY 100
+#define size 50
 
 int main()
 {
-    char frase[TAM_ARRAY], palavra[TAM_ARRAY];
-    int i, j, inicio, fim;
-    
-    printf("Escreva uma frase.\n");
-    fgets(frase, TAM_ARRAY, stdin);
-    
-    printf("Escreva uma palavra.\n");
-    fgets(palavra, TAM_ARRAY, stdin);
-    
-    for(i = 0; frase[i] < '\0'; i++){
-        
-        if(palavra[0] == frase[i]){
-            
-            for(j = 1; palavra[j] != '\0' && frase[j + 1] != '\0'
-            || palavra[j] == frase[j + 1]; j++){
-                
-                
-            }
-            
-            if(palavra[j] == '\0'){
-                
-                printf("%d", i + 1);
-                
-            }
-            
-        }
-        
-    }
+	char str[size], substr[size];
+	char *existe = strstr(str, substr);
+	
+	printf("Escreva uma frase ou palavra:\n");
+	fgets(str, size, stdin);
+	
+	printf("Escreva uma palavra ou letras:\n");
+	fgets(substr, size, stdin);
 
-    return 0;
+	if (existe != NULL){
+	    
+		printf("\n'%s' contem '%s'\n", str, substr);
+		
+	}else{
+	    
+		printf("\n'%s' não contém '%s'\n", str, substr);
+		
+	}
+
+	return 0;
 }
-
