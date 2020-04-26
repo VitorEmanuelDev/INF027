@@ -1,5 +1,5 @@
-//Escreva um programa para gerar o invertido de um número com três algarismos (exemplo: o invertido de 498 é 894).
-
+//Escreva um programa para gerar o invertido de um número com três
+//algarismos (exemplo: o invertido de 498 é 894).
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,21 +10,22 @@
 
 int main()
 {   
-    int num, resto;
+    int num, resto, soma = 0;
     
     printf("Informe um número.\n");
     scanf("%d", &num);
     
-    while(num > 0){
+    for(int i = 2; i >= 0; i--){
         
     resto = num % 10;
+    resto = resto * pow(10, i);
     num = num / 10;
+    soma += resto;
     
-    printf("%d", resto);
-    
-        }
-        
-    num++;
-    
+    }
+       
+    printf("%d", soma); 
+  
     return 0;
 }
+
