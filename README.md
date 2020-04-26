@@ -19,4 +19,6 @@ Curso introdutório: https://www.youtube.com/watch?v=9-ubSA9GA3o
 
 Material de estudo 3: https://www.ime.usp.br/~pf/algoritmos/index.html
 
-Strings Tutorial in C:https://www.codingame.com/playgrounds/14213/how-to-play-with-strings-in-c/what-is-a-string-in-c
+Strings in C:https://www.codingame.com/playgrounds/14213/how-to-play-with-strings-in-c/what-is-a-string-in-c
+
+Pointers in C:https://www.codingame.com/playgrounds/14589/how-to-play-with-pointers-in-c/address-of-a-variable
