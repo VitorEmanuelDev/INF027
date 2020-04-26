@@ -8,10 +8,10 @@ palavras.*/
 
 int main()
 {
-	char str[size], strNorm[size], aux[size];
+	char str[size], strNorm[size];
 	int i, j = 0;
 	
-	printf("Escreva uma frase ou palavra:\n");
+	printf("Escreva uma frase:\n");
 	fgets(str, size, stdin);
 	
     for(i = 0; str[i] != '\0'; i++){
