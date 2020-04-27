@@ -33,9 +33,9 @@ int main()
     
     alg1 = (agencia%1000)/100; 
     
-    alg2 = (agencia%1000)%100/10;
+    alg2 = (agencia%100)/10;
     
-    alg3 = ((agencia%1000)%100)%10;
+    alg3 = agencia%10;
     
     iDV = 11 - (alg*5 + alg1*4 + alg2*3 + alg3*2)%11;
     
@@ -57,3 +57,5 @@ int main()
         
     return 0;
 }
+
+
