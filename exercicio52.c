@@ -9,8 +9,6 @@ Criar um algoritmo em C que imprima os N primeiros termos da série de
 FETUCCINE, sabendo-se que para existir esta série serão necessários pelo menos três termos.*/
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
 
 int main(){
     int termo1, termo2, limite, i, termo;
