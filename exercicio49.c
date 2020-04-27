@@ -5,32 +5,38 @@ número N (digitado pelo usuário) é primo ou não.*/
 
 int main() {
     
-    int num, i, resto;
+    int num, i, contagem = 0;
     
     printf("Informe um número inteiro (num > 0):\n");
     scanf("%d", &num);
     
-    if(num < 0 || num == 1){
+    if (num < 0){
         
-        printf("%d não é um número primo", num);
+        printf("Número positivo, pow!");
         
-    } else if(num == 2){
         
-        printf("%d é um número primo", num);
+    }else{
+    
+        for (i = 1; i <= num; i++) {
+            //printf("%d\n", i);
+            
+            if (num%i == 0) {
+                
+                contagem++;
+                
+            }
+            
+        }
+    
+        if(contagem == 2 && num != 1 ){
+    
+   	        printf("\n%d é um número primo.", num);
         
-    }else if(num%2 == 0){
-            
-            printf("%d não é um número primo", num);
-            
-    }else if (num > 23 && (num%2 == 0 || num%3 == 0 || num%5 == 0 
-    || num%7 ==0 || num%11 == 0 ||num%13 == 0 || num%17 == 0 || num%19 == 0 || num%23 == 0)){
-            
-            printf("%d não é um número primo", num);
-            
-    } else{
-            
-            printf("%d é um número primo.", num);
-            
+        }else{
+        
+   	        printf("\n%d não é um número primo.", num);
+   	
+        }
     }
     
   return 0;
