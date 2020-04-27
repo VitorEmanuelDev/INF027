@@ -17,29 +17,31 @@ int main() {
         
     }else{
     
-    for (i = 2; i <= num-1; i++) {
-        //printf("%d\n", i);
-        
-        if (num%i == 0) {
+        for (i = 2; i <= num-1; i++) {
+            //printf("%d\n", i);
             
-            contagem++;
-            break;
+            if (num%i == 0) {
+                
+                contagem++;
+                break;
+                
+            }
             
         }
-        
-    }
     
-    if(contagem == 0 && num != 1 ){
+        if(contagem == 0 && num != 1 ){
     
-   	    printf("\n%d é um número primo.", num);
+   	        printf("\n%d é um número primo.", num);
         
-    }else{
+        }else{
         
-   	    printf("\n%d não é um número primo.", num);
+   	        printf("\n%d não é um número primo.", num);
    	
+        }
     }
-}
+
   return 0;
   
 }
+
 
