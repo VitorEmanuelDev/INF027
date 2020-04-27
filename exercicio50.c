@@ -15,7 +15,7 @@ seguintes combinações:
 #include <math.h>
 int main()
 {
-    int num, contador, aux;
+    int num, crescente, decrescente;
     
     printf("Informe um número.\n");
     scanf("%d", &num);
@@ -23,13 +23,6 @@ int main()
     if (num < 0){
         
         printf("Valor inválido");
-        
-    }
-    
-    for (contador = 1, aux = num - 1; contador < num; contador++, aux--){
-        
-        printf("\n%d %d", contador, aux);
-       
         
     }
     
@@ -43,6 +36,15 @@ int main()
         
     }*/
     
+    
+    
+    for (crescente = 1, decrescente = num - 1; crescente < num; crescente++, decrescente--){
+        
+        printf("\n%d %d", crescente, decrescente);
+       
+        
+    }
+    
    /* for (contador = num; contador > 1; contador--){
         
         num = num - 1;
@@ -53,3 +55,4 @@ int main()
     
     return 0;
 }
+
