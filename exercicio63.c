@@ -28,19 +28,15 @@ int main()
         
     }
     
-    for(i = 0; i < 10; i++){
-        
-        array3[i] = array1[i] + array2[i];
-        
-    }
-    
     printf("Soma dos dois arrays é.\n");
     
     for(i = 0; i < 10; i++){
         
+        array3[i] = array1[i] + array2[i];
         printf("%.0f ", array3[i]);
         
     }
     
     return 0;
+    
 }
