@@ -33,19 +33,17 @@ int main() {
                 
         }      
             
-        if(numero == primo1 && numero == primo2){
                         
-            somaPar = primo1 + primo2;
+        somaPar = primo1 + primo2;
+                    
+        if(somaPar%2 == 0 && somaPar > 500 && somaPar < 1000){
                         
-            if(somaPar%2 == 0 && somaPar > 500 && somaPar < 1000){
-                            
-                printf("\n%d + %d = %d", primo1, primo2, somaPar);
-                            
-                }
-                        
-            }
-           
-       }
-     
+            printf("\n%d + %d = %d", primo1, primo2, somaPar);
+                    
+        }
+    
+    }
+    
+    return 0;
+    
 }
-
