@@ -4,14 +4,15 @@ a. A moda dos elementos no array (elemento mais freqüente).
 b. A mediana dos elementos no array (elemento central)
 c. A média
 */
+
 #include <stdio.h>
 #define TAM_ARRAY 22
 
 int main()
 {
     int i, j, moda, contaModa, atual, contaAtual, armazena,
-    array[] = {18,19,12,18,12,14,16,9,8,11,16,12,1,15,18,20,20,18,12,18,14,13};
-    float media, soma = 0, mediana;
+    array[] = {18,19,12,18,12,14,16,9,8,11,16,12,14,15,18,20,20,18,12,18,14,13};
+    float media, soma = 0, mediana = 0;
     
     //ordenar array
     for(i = 0; i < TAM_ARRAY; i++){
@@ -69,7 +70,7 @@ int main()
         
     } else{ 
         
-        mediana = array[TAM_ARRAY/2] + 1;
+        mediana = array[TAM_ARRAY/2] ;
         
     }
     
