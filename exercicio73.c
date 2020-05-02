@@ -5,14 +5,28 @@ b. A mediana dos elementos no array (elemento central)
 c. A média
 */
 
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
 #include <stdio.h>
-#define TAM_ARRAY 22
+#include <stdlib.h>
+#define TAM_ARRAY 30
 
 int main()
 {
-    int i, j, moda, contaModa, atual, contaAtual, armazena,
-    array[] = {18,19,12,18,12,14,16,9,8,11,16,12,14,15,18,20,20,18,12,18,14,13};
+    int i, j, moda, contaModa, atual, contaAtual, armazena, array[TAM_ARRAY];
     float media, soma = 0, mediana = 0;
+    
+    for(i = 0; i < TAM_ARRAY; i++){
+        
+        array[i] = rand() % 100;
+        
+    }
     
     //ordenar array
     for(i = 0; i < TAM_ARRAY; i++){
@@ -28,6 +42,12 @@ int main()
            }
            
        }
+        
+    }
+    
+    for(i = 0; i < TAM_ARRAY; i++){
+        
+        printf("%d ", array[i]);
         
     }
     
@@ -66,17 +86,18 @@ int main()
     //calculo da mediana
     if(TAM_ARRAY%2 == 0){
         
-        mediana = (array[(TAM_ARRAY/2) - 1] + array[(TAM_ARRAY/2) + 1])/2;
-        
+        mediana = (array[(TAM_ARRAY/2) - 1] + array[(TAM_ARRAY/2) + 1]) / 2.0;
+
     } else{ 
         
-        mediana = array[TAM_ARRAY/2] ;
+        mediana = array[TAM_ARRAY/2];
         
     }
     
     
     media = soma/TAM_ARRAY;
-    printf("Média: %.2f\n", media);
+    
+    printf("\nMédia: %.2f\n", media);
     
     printf("Mediana: %.2f\n", mediana);
     
