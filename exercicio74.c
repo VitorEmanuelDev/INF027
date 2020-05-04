@@ -23,14 +23,14 @@ int main()
     int final, posInsert, posRemove, igual;
     int continuar = 0;
     
-    //a. Inserir um elemento no final do vetor
-    
     for(i = 0; i <= TAM_ARRAY; i++){
 	    
 	    array[i] = rand() % 30;
 	    printf("%d ", array[i]);
 	    
 	}
+	
+	//a. Inserir um elemento no final do vetor
     
     printf("\nInforme o novo elemento final.\n");
     scanf("%d", &final);
@@ -57,7 +57,7 @@ int main()
     
     for(i = 0; i <= TAM_ARRAY; i++){
     
-    printf("%d ", array[i]);
+        printf("%d ", array[i]);
     
     }
     
@@ -94,9 +94,9 @@ int main()
                 array[k] = array[k + 1];
             }
             
-            TAM_ARRAY--;//diminuir o tamanho da lista depois de jogar o elemento repetido no array fantasm
+            TAM_ARRAY--;//diminuir o tamanho da lista depois de jogar o elemento repetido no array fantasma
             
-            i--;//não incrementar o j se houver troca. senão pode ocorrer de um elemento repetido ser pulado
+            i--;//não incrementar o i se houver troca. senão pode ocorrer de um elemento repetido ser pulado
             
         }
         
@@ -142,5 +142,6 @@ int main()
     
     return 0;
 }
+
 
 
