@@ -1,12 +1,13 @@
-/*Escreva um programa em C que leia duas string e informe se a primeira contém a
+/*Escreva um programa em C que leia duas strings e informe se a primeira contém a
 segunda.*/
 
 #include <stdio.h>
 #include <string.h>
-#define size 50
+
 
 int main()
 {
+    	int size = 30;
 	char str[size], substr[size];
 	char *existe = strstr(str, substr);
 	
@@ -18,13 +19,14 @@ int main()
 
 	if (existe != NULL){
 	    
-		printf("\n'%s' contem '%s'\n", str, substr);
+		printf("'%s' contém '%s'\n", str, substr);
 		
 	}else{
 	    
-		printf("\n'%s' não contém '%s'\n", str, substr);
+		printf("'%s' não contém '%s'\n", str, substr);
 		
 	}
 
 	return 0;
+	
 }
