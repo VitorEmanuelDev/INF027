@@ -27,5 +27,7 @@ int main()
         
     }
     
+    strNorm[j] = '\0'; 
+    
     printf("%s", strNorm);
 }
