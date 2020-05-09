@@ -15,10 +15,6 @@ int main()
 	scanf("%s", str);
 	
 	for(i = 0; str[i] != '\0'; i++){
-	    
-	    if((str[i] >= '0' && str[i] <= '9') ||
-	       (str[i] >= 'A' && str[i] <= 'F') ||
-	       (str[i] >= 'a' && str[i] <= 'f')){
 	           
 	       switch(str[i]){
 	               
@@ -117,8 +113,6 @@ int main()
 	       
 	       //printf("\n%d", valor);
 	       arr[i] = valor;
-	           
-	   }    
 	   
 	   //printf("%d", contador);
 	   contador++;
@@ -139,4 +133,3 @@ int main()
 	return 0; 
 	
 }
-
