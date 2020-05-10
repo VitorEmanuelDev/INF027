@@ -4,18 +4,19 @@ decimal (base 10)*/
 #include <stdio.h> 
 #include <string.h>
 #include <math.h>
-#define size 30
 
 int main() 
 { 
-	char str[size];
-	int arr[size], i, j, contador = 0;
-	float valor, soma = 0;
+	char str[30];
+	int arr[30], i, contador = 0, size = 0;
+	float valor, somatorio = 0;
 	
 	printf("Escreva um número com algarismos romanos (use letras maiúsculas).\n");
 	scanf("%s", str);
 	
-	for(i = 0; str[i] != '\0'; i++){
+	 size = strlen(str);
+	
+	for(i = 0; i < size; i++){
 	           
 	       switch(str[i]){
 	               
@@ -53,37 +54,30 @@ int main()
 	       }
 	       
 	       arr[i] = valor;
-	       contador++;
+	       //contador++;
 	       //printf("\n%i", arr[i]);
 	       //printf("\n%i", contador);
 	       
     }
     
     
-    //arr[contador] = 0;
-    
-    for(i = 0; i < contador; i++){
-        //printf("\n%i", arr[i]);
+    somatorio = arr[size-1];
+   
+    for(i = size - 1; i > 0; i--){
         
-        if(arr[i] < arr[i+1]){
-          
-            soma = arr[i-1] - arr[i];//wtf???? a rever
-            //soma = arr[i+1] - arr[i];//
-            //printf("%i %i", arr[i+1], arr[i]);
-            //printf("\n%.0f", soma);
-         
-        } else {
-         
-            soma += arr[i];
-         
-        }
-        
+       if(arr[i] > arr[i-1]){
+           
+             somatorio = somatorio - arr[i-1];
+       
+       }else{
+           
+             somatorio = somatorio + arr[i-1];
+             
+       }
+       
     }
-    
-    printf("\n%.0f", soma);
-    
-	return 0; 
+   
+   printf("%s corresponde a: %.0f", str, somatorio);
+
 	
 }
-
-
