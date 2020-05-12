@@ -3,7 +3,6 @@ decimal (base 10)*/
 
 #include <stdio.h> 
 #include <string.h>
-#include <math.h>
 
 int main() 
 { 
@@ -14,7 +13,7 @@ int main()
 	printf("Escreva um número com algarismos romanos (use letras maiúsculas).\n");
 	scanf("%s", str);
 	
-	 size = strlen(str);
+	size = strlen(str);
 	
 	for(i = 0; i < size; i++){
 	           
@@ -62,8 +61,9 @@ int main()
     
     
     somatorio = arr[size-1];
+    //printf("%i", arr[size-1]);
    
-    for(i = size - 1; i > 0; i--){
+    for(i = size-1; i > 0; i--){
         
        if(arr[i] > arr[i-1]){
            
