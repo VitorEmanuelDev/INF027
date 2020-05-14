@@ -15,9 +15,9 @@ int main()
     char str1[15], str2[15]; 
     char stra, strb; 
     
-    printf("Escreva uma palavra.\n");
+    printf("Escreva uma palavra de menos de 15 letras.\n");
     scanf("%s", str1);
-    printf("Escreva a mesma palavra mas com letras diferentes.\n");
+    printf("Escreva a mesma palavra mas com letras de tamanhos diferentes.\n");
     scanf("%s", str2);
 
    
