@@ -1,52 +1,83 @@
-/*Escreva um programa em C, que verifique se duas strings são iguais, independente da
-caixa das letras. Por exemplo, este programa deve dizer que “Teste”é igual a “TeStE”.*/
+/*Escreva um número que leia um número em Romano e imprima o equivalente em
+decimal (base 10)*/
 
+#include <stdio.h> 
 #include <string.h>
-#include <stdio.h>
-#include <ctype.h>
-#define size 30
-
 
 int main() 
 { 
+	char str[30];
+	int arr[30], i, contador = 0, size = 0;
+	float valor, somatorio = 0;
+	
+	printf("Escreva um número com algarismos romanos (use letras maiúsculas).\n");
+	scanf("%s", str);
+	
+	size = strlen(str);
+	
+	for(i = 0; i < size; i++){
+	           
+	       switch(str[i]){
+	               
+	            case 'I':
+	            valor = 1;
+	            break;
+	            
+	            case 'V':
+	            valor = 5;
+	            break;
+	            
+	            case 'X':
+	            valor = 10;
+	            break;
+	            
+	            case 'L':
+	            valor = 50;
+	            break;
+	            
+	            case 'C':
+	            valor = 100;
+	            break;
+	            
+	            case 'D':
+	            valor = 500;
+	            break;
+	            
+	            case 'M':
+	            valor = 1000;
+	            break;
+	            
+	            default: printf("Valor inválido.\n"); 
+                break; 
+	       
+	       }
+	       
+	       arr[i] = valor;
+	       //contador++;
+	       //printf("\n%i", arr[i]);
+	       //printf("\n%i", contador);
+	       
+    }
     
-    int i = 0, j = 0;
-
     
-    char str1[size], str2[size]; 
-    char stra, strb; 
-    
-    printf("Escreva uma palavra de menos de 15 letras.\n");
-    fgets(str1, size, stdin);
-    printf("Escreva a mesma palavra mas com letras de tamanhos diferentes.\n");
-    fgets(str2, size, stdin);
-
+    somatorio = arr[size-1];
+    //printf("%i", arr[size-1]);
    
-    while (str1[i]) {
+    for(i = size-1; i > 0; i--){
         
-        stra = str1[i]; 
-        toupper(stra); 
-        i++; 
-        
-    } 
-    
-    while(str2[j]){
-        
-        strb = str2[j]; 
-        toupper(strb); 
-        j++; 
-        
+       if(arr[i] > arr[i-1]){
+           
+             somatorio = somatorio - arr[i-1];
+       
+       }else{
+           
+             somatorio = somatorio + arr[i-1];
+             
+       }
+       
     }
-    
-    if(stra == strb){
-        
-        printf("Mesma palavra.");
-        
-    }else{
-        
-        printf("Palavras diferentes.");
-        
-    }
-  
-    return 0; 
-} 
+   
+   printf("%s corresponde a: %.0f", str, somatorio);
+
+	
+}
