@@ -1,16 +1,21 @@
-/* Determine the Net Pay*/
+/*Determine Net Pay*/
 
 #include <stdio.h>
 #define size 100
+#define hourlyRate 12
+#define tax1 0.85
+#define tax2 0.8
+#define tax3 0.75
 
 int main()
 {
-    float hourlyRate = 12, tax1 = 0.85, tax2 = 0.8, tax3 = 0.75, pay = 0, netPay = 0, overtime = 0, rest = 0;
+    float pay = 0, netPay = 0, overtime = 0, rest = 0;
     int hours = 0;
     char name[size];
     
     printf("Employee name:\n");
     fgets(name, size, stdin);
+    //scanf("%s", name);
     
     printf("How many hours did %s work?\n", name);
     scanf("%d", &hours);
