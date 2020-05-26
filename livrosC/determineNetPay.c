@@ -1,11 +1,5 @@
-/******************************************************************************
+/* Determine the Net Pay*/
 
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <stdio.h>
 #define size 100
 
@@ -29,7 +23,6 @@ int main()
         
         overtime = hours - 40;
         hours = hours - overtime;
-        
         pay = (hours * hourlyRate) + (overtime * (hourlyRate * 1.5));
         
     }
@@ -41,13 +34,11 @@ int main()
     } else if (pay > 300 && pay <= 450){
         
         rest = pay - 300;
-        
         netPay = 300 * tax1 + rest * tax2; 
     
     } else {
         
         rest = pay - 450;
-        
         netPay = 300 * tax1 + 150 * tax2 + rest * tax3;
         
     }
