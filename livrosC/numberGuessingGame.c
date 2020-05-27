@@ -45,7 +45,16 @@ int main()
         
         if(guesses > 0 && number != guess){
             
-            printf("You have %i guess(es) left.\n", guesses);
+            if(guesses < 2){
+                
+                printf("You have %i guess left.\n", guesses);
+                
+            } else {
+                
+                printf("You have %i guesses left.\n", guesses);
+                
+            }
+            
             
         } else if (guesses == 0 && number != guess){
             
