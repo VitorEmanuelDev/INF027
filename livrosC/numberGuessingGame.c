@@ -11,7 +11,7 @@ int main()
     
     srand(time(0)); 
     
-    number = rand() % 21;
+    number = rand() % 20;
     
     //printf("%i", number);
     
@@ -21,6 +21,12 @@ int main()
         
         printf("What's your guess?\n");
         scanf("%i", &guess);
+        
+        if(guess < 0 || guess > 20){
+            
+            printf("Invalid input.");
+            
+        }
     
         if(guess == number){
             
@@ -51,6 +57,6 @@ int main()
         guesses--;
     
     }
-
+   
     return 0;
 }
