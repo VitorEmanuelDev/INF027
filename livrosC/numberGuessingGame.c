@@ -25,6 +25,7 @@ int main()
         if(guess < 0 || guess > 20){
             
             printf("Invalid input.");
+            break;
             
         }
     
@@ -58,7 +59,7 @@ int main()
             
         } else if (guesses == 0 && number != guess){
             
-            printf("You have no guesses left. The right number was %i.\n", number);
+            printf("You have no guesses left. The right guess was %i.\n", number);
             break;
             
         }
