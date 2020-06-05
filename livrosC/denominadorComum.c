@@ -1,4 +1,4 @@
-/* Denominador comum */
+/* Denominador comum / Commom denominator*/
 
 #include <stdio.h>
 #include <stdlib.h>
