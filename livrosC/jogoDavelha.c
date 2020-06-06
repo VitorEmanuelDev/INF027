@@ -24,7 +24,7 @@ int main()
        quadro();
        jogador = (jogador % 2) ? 1 : 2;
        
-       printf("Escolha um número do quadro, jogador %d.", jogador);
+       printf("Escolha um número do quadro, jogador %d.\n", jogador);
        scanf("%d", &escolha);
        
        marca = (jogador == 1) ? 'x' : 'o';
