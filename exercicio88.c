@@ -17,12 +17,25 @@ int main()
     printf("Escreva uma frase.\n");
     fgets(str, size, stdin);
     
-    for(i = 0; str[i] != '\0'; i++) {
-        
-        stra = str[i]; 
-        printf("%c", toupper(stra)); 
-     
-    } 
+    //for(i = 0; str[i] != '\0'; i++) {
+    //    
+    //    stra = str[i]; 
+    //    printf("%c", toupper(stra)); 
+    // 
+    //} 
+    
+    
+  	for (i = 0; str[i] != '\0'; i++){
+  	    
+  		if(str[i] >= 'a' && str[i] <= 'z'){
+  		    
+  			stra = str[i] -32;
+  			printf("%c", stra); 
+  			
+		}
+  	}
+
     
     return 0; 
 } 
+
