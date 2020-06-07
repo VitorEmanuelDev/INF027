@@ -1,41 +1,62 @@
-/*Escreva um programa em C, que coloque a string lida toda em caixa alta.*/
-
+/*Escreva um programa em C, que verifique se duas strings são iguais, independente da
+caixa das letras. Por exemplo, este programa deve dizer que “Teste”é igual a “TeStE”.*/
 
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
-#define size 30
 
 
 int main() 
 { 
     
-    int i = 0;
+    int i = 0, j = 0;
 
-    char str[size], stra; 
     
-    printf("Escreva uma frase.\n");
-    fgets(str, size, stdin);
+    char str1[15], str2[15]; 
+    char stra, strb; 
     
-    //for(i = 0; str[i] != '\0'; i++) {
-    //    
-    //    stra = str[i]; 
-    //    printf("%c", toupper(stra)); 
-    // 
-    //} 
-    
-    
-  	for (i = 0; str[i] != '\0'; i++){
-  	    
-  		if(str[i] >= 'a' && str[i] <= 'z'){
+    printf("Escreva uma palavra de menos de 15 letras.\n");
+    scanf("%s", str1);
+    printf("Escreva a mesma palavra mas com letras de tamanhos diferentes.\n");
+    scanf("%s", str2);
+
+   
+    while (str1[i]) {
+        
+        if(str1[i] >= 'a' && str1[i] <= 'z'){
   		    
-  			stra = str[i] -32;
-  			printf("%c", stra); 
+  			stra = str1[i] - 32;
+  			//printf("%c", stra); 
   			
 		}
-  	}
-
+		
+        i++; 
+        
+    } 
     
+    while(str2[j]){
+        
+        if(str2[j] >= 'a' && str2[j] <= 'z'){
+  		    
+  			strb = str2[j] - 32;
+  			//printf("%c", strb); 
+  			
+		} 
+		
+        j++; 
+        
+    }
+    
+    if(stra == strb){
+        
+        printf("Mesma palavra.");
+        
+    }else{
+        
+        printf("Palavras diferentes.");
+        
+    }
+  
     return 0; 
 } 
 
