@@ -48,7 +48,7 @@ int main()
 	            break;
 	            
 	            default: printf("Valor inválido.\n"); 
-                break; 
+                    break; 
 	       
 	       }
 	       
