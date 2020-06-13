@@ -40,7 +40,9 @@ int main()
     }
     
     //printf("%i", teste);
-         
+    
+    
+        
     //printf("%s", iniciais);//teste
         
     
@@ -77,12 +79,14 @@ int main()
         
     }
     
-    sobrenome[i] = '\0';
+    sobrenome[i] = ' ';
+    sobrenome[i+1] = '\0';
+    
     
     i = 0;
     
     //Store all the initials, but the one that refers to the last name into a new array of characters
-    while(i < strlen(iniciais) - 3){
+    while(i < strlen(iniciais) - 5){
         
         assinatura[i] = iniciais[i];
         
@@ -93,16 +97,19 @@ int main()
     assinatura[i] = '\0';
     
     
-    //Concatenate the two strings 
-    for (j = 0; sobrenome[j] != '\0'; j++){
+    //Concatenate the two strings by first initializing the one that will show first inthe screen output 
+    
+    for (i = 0; sobrenome[i] != '\0'; i++);
+    
+    for (j = 0; assinatura[j] != '\0'; j++){
         
-        assinatura[i+j] = sobrenome[j];
+        sobrenome[i+j] = assinatura[j];
         
     }
     
-    assinatura[i+j] = '\0';
+    sobrenome[i+j] = '\0';
 
-    printf("%s", assinatura);  
+    printf("%s", sobrenome);  
     
     return 0;
     
