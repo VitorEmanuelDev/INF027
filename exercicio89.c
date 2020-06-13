@@ -15,15 +15,16 @@ int main()
     printf("Informe o seu nome:\n");
     fgets(nome, size, stdin);
     
-    
+    //Hardcode the first initial
     iniciais[0] = nome[0];
     iniciais[1] = '.';
     iniciais[2] = ' ';
     //int teste = 0;
     
+    //Iterate the string to find and isolate each initial whenever the loop finds a space
     for(j = 0, i = 0; j < strlen(nome); j++){
         
-        //printf("%c", nome[j]);
+        //printf("%c", nome[j]);//teste
         if(nome[j] == ' '){
             
             iniciais[i+3] = nome[j+1];
@@ -39,21 +40,21 @@ int main()
     }
     
     //printf("%i", teste);
-    
-    
-        
-    //printf("%s", iniciais);
+         
+    //printf("%s", iniciais);//teste
         
     
-    //printf(nome);
+    //printf(nome);//teste
+    
     i = strlen(nome) - 1;
     j = 0;
     contador = 0;
     
+    //Iterate through the string from the end of it in order to store the last name in reverse 
     while(nome[i] != ' '){
         
         reverse[j] = nome[i];
-        //printf("%c", nome[i]);
+        //printf("%c", nome[i]);//teste
         
         i--;
         j++;
@@ -64,11 +65,12 @@ int main()
     j = contador - 1;
     i = 0;
     
+    //Put the last name into the right order
     while(j > 0){
         
-        //printf("%c", reverse[j]);
+        //printf("%c", reverse[j]);//teste
         sobrenome[i] = reverse[j];
-        //printf("%c", sobrenome[i]);
+        //printf("%c", sobrenome[i]);//teste
         
         j--;
         i++;
@@ -78,20 +80,27 @@ int main()
     sobrenome[i] = '\0';
     
     i = 0;
-    //contador = 0;
     
+    //Store all the initials, but the one that refers to the last name into a new array of characters
     while(i < strlen(iniciais) - 3){
         
         assinatura[i] = iniciais[i];
         
         i++;
-        //contador++;
         
     }
     
     assinatura[i] = '\0';
     
-    strcat(assinatura, sobrenome);
+    
+    //Concatenate the two strings 
+    for (j = 0; sobrenome[j] != '\0'; j++){
+        
+        assinatura[i+j] = sobrenome[j];
+        
+    }
+    
+    assinatura[i+j] = '\0';
 
     printf("%s", assinatura);  
     
