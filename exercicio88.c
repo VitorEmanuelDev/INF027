@@ -1,62 +1,115 @@
-/*Escreva um programa em C, que verifique se duas strings são iguais, independente da
-caixa das letras. Por exemplo, este programa deve dizer que “Teste”é igual a “TeStE”.*/
+/*Escreva um programa em C, que gere uma string composta pelo último nome, seguido de
+virgula e as iniciais dos demais nomes (em ordem), seguida de ponto. Por exemplo, se a
+string entrada for “Gabriel Garcia Marquez”, a string gerada deve ser “Marquez, G. G.”.*/
 
-#include <string.h>
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
+#define size 100
 
-
-int main() 
-{ 
+int main()
+{   
+    char nome[size], reverse[size], sobrenome[size], assinatura[size], iniciais[size];
+    int i, j, contador;
     
-    int i = 0, j = 0;
-
+    printf("Informe o seu nome:\n");
+    fgets(nome, size, stdin);
     
-    char str1[15], str2[15]; 
-    char stra, strb; 
+    //Hardcode the first initial
+    iniciais[0] = nome[0];
+    iniciais[1] = '.';
+    iniciais[2] = ' ';
+    //int teste = 0;
     
-    printf("Escreva uma palavra de menos de 15 letras.\n");
-    scanf("%s", str1);
-    printf("Escreva a mesma palavra mas com letras de tamanhos diferentes.\n");
-    scanf("%s", str2);
-
-   
-    while (str1[i]) {
+    //Iterate the string to find and isolate each initial whenever the loop finds a space
+    for(j = 0, i = 0; j < strlen(nome); j++){
         
-        if(str1[i] >= 'a' && str1[i] <= 'z'){
-  		    
-  			stra = str1[i] - 32;
-  			//printf("%c", stra); 
-  			
-		}
-		
-        i++; 
-        
-    } 
-    
-    while(str2[j]){
-        
-        if(str2[j] >= 'a' && str2[j] <= 'z'){
-  		    
-  			strb = str2[j] - 32;
-  			//printf("%c", strb); 
-  			
-		} 
-		
-        j++; 
+        //printf("%c", nome[j]);//teste
+        if(nome[j] == ' '){
+            
+            iniciais[i+3] = nome[j+1];
+            iniciais[i+4] = '.';
+            iniciais[i+5] = ' ';
+            
+            i += 3;
+            
+            //teste++;
+            
+        }
         
     }
     
-    if(stra == strb){
+    //printf("%i", teste);
         
-        printf("Mesma palavra.");
+    //printf("%s", iniciais);//teste
         
-    }else{
+    
+    //printf(nome);//teste
+    
+    i = strlen(nome) - 1;
+    j = 0;
+    contador = 0;
+    
+    //Iterate through the string from the end of it in order to store the last name in reverse 
+    while(nome[i] != ' '){
         
-        printf("Palavras diferentes.");
+        reverse[j] = nome[i];
+        //printf("%c", nome[i]);//teste
+        
+        i--;
+        j++;
+        contador++;
+     
+    }
+    
+    j = contador - 1;
+    i = 0;
+    
+    //Put the last name into the right order
+    while(j > 0){
+        
+        //printf("%c", reverse[j]);//teste
+        sobrenome[i] = reverse[j];
+        //printf("%c", sobrenome[i]);//teste
+        
+        j--;
+        i++;
         
     }
-  
-    return 0; 
-} 
+    
+    sobrenome[i] = ',';
+    sobrenome[i+1] = ' ';
+    sobrenome[i+2] = '\0';
+    
+    
+    i = 0;
+    
+    //Store all the initials, but the one that refers to the last name into a new array of characters
+    while(i < strlen(iniciais) - 4){
+        
+        assinatura[i] = iniciais[i];
+        
+        i++;
+        
+    }
+    
+    assinatura[i] = '\0';
+    
+    
+    //Concatenate the two strings by first initializing the one that will show first inthe screen output 
+    
+    for (i = 0; sobrenome[i] != '\0'; i++);
+    
+    for (j = 0; assinatura[j] != '\0'; j++){
+        
+        sobrenome[i+j] = assinatura[j];
+        
+    }
+    
+    sobrenome[i+j] = '\0';
 
+    printf("%s", sobrenome);  
+    
+    return 0;
+    
+}
