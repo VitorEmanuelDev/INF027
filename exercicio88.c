@@ -40,6 +40,8 @@ int main()
     }
     
     //printf("%i", teste);
+    
+    
         
     //printf("%s", iniciais);//teste
         
@@ -108,7 +110,7 @@ int main()
     
     sobrenome[i+j] = '\0';
 
-    printf("%s", sobrenome);  
+    printf("\n%s", sobrenome);  
     
     return 0;
     
