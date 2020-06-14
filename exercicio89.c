@@ -55,11 +55,8 @@ int main()
     }
     
     //printf("%i", teste);
-    
-    
         
-    //printf("%s", iniciais);//teste
-        
+    //printf("%s", iniciais);//teste  
     
     //printf(nome);//teste
     
