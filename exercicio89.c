@@ -10,10 +10,25 @@ string entrada for “Gabriel Garcia Marquez”, a string gerada deve ser “Mar
 int main()
 {   
     char nome[size], reverse[size], sobrenome[size], assinatura[size], iniciais[size];
-    int i, j, contador;
+    int i, j, contador, espacos;
     
     printf("Informe o seu nome:\n");
     fgets(nome, size, stdin);
+    
+    i = 0;
+    espacos = 0;
+    
+    while(nome[i] != '\0'){
+        
+        if(nome[i] == ' '){
+            
+            espacos++;
+            
+        } 
+        
+        i++;
+        
+    }
     
     //Hardcode the first initial
     iniciais[0] = nome[0];
@@ -87,11 +102,26 @@ int main()
     i = 0;
     
     //Store all the initials, but the one that refers to the last name into a new array of characters
-    while(i < strlen(iniciais) - 5){
+    
+    if(espacos == 2){
         
-        assinatura[i] = iniciais[i];
+        while(i < strlen(iniciais) - 5){
+            
+            assinatura[i] = iniciais[i];
+            
+            i++;
+            
+        }
         
-        i++;
+    }else{
+        
+        while(i < strlen(iniciais) - 3){
+            
+            assinatura[i] = iniciais[i];
+            
+            i++;
+            
+        }
         
     }
     
@@ -115,6 +145,4 @@ int main()
     return 0;
     
 }
-
-
 
