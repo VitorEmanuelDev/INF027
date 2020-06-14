@@ -130,7 +130,7 @@ int main()
     
     //Concatenate the two strings by first initializing the one that will show first inthe screen output 
     
-    for (i = 0; sobrenome[i] != '\0'; i++);//this loop is needed to include the hardcoded comma and space
+    for (i = 0; sobrenome[i] != '\0'; i++);//this loop is needed to initialize the string, and include the hardcoded comma and space
     
     for (j = 0; assinatura[j] != '\0'; j++){
         
