@@ -79,8 +79,9 @@ int main()
         
     }
     
-    sobrenome[i] = ' ';
-    sobrenome[i+1] = '\0';
+    sobrenome[i] = ',';
+    sobrenome[i+1] = ' ';
+    sobrenome[i+2] = '\0';
     
     
     i = 0;
@@ -99,7 +100,7 @@ int main()
     
     //Concatenate the two strings by first initializing the one that will show first inthe screen output 
     
-    for (i = 0; sobrenome[i] != '\0'; i++);
+    for (i = 0; sobrenome[i] != '\0'; i++);//this loop is needed to include the hardcoded comma and space
     
     for (j = 0; assinatura[j] != '\0'; j++){
         
@@ -109,8 +110,11 @@ int main()
     
     sobrenome[i+j] = '\0';
 
-    printf("%s", sobrenome);  
+    printf("\n%s", sobrenome);  
     
     return 0;
     
 }
+
+
+
