@@ -1,0 +1,103 @@
+/* functions practice with char strings */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int stringTamanho( char string[]);
+void concatena(char resultado[],  char str1[],  char str2[]); 
+bool stringsIguais( char s1[],  char s2[]);
+
+int main()
+{
+    char palavra1[25];
+    char palavra2[25];
+    char resultado[50];
+    char str1[25], str2[25];
+    
+    printf("Informe duas palavras.\n");
+    scanf("%s%s", palavra1, palavra2);
+    printf("As duas palavras têm %d e %d letras respectivamente.\n", stringTamanho(palavra1), stringTamanho(palavra2));
+
+    concatena(resultado, palavra1, palavra2);
+    
+    printf("\nQuando concatenadas ficam assim: %s\n", resultado);
+    
+    printf("\nInforme outras duas palavras.\n");
+    scanf("%s%s", str1, str2);
+    
+    if(stringsIguais(str1, str2) == 1){
+        
+        printf("As duas palavras são idênticas.");
+        
+    }else{
+        
+        printf("As duas palavras são diferentes.");
+        
+    }
+    
+    return 0;
+    
+}
+
+int stringTamanho( char string[]){
+    
+    int contador = 0;
+    
+    while(string[contador] != '\0'){
+        
+        contador++;
+        
+    }
+    
+    return contador;
+    
+}
+
+void concatena(char resultado[],  char str1[],  char str2[]){
+    
+    int i, j;
+    
+    for(i = 0; str1[i] != '\0'; i++){
+        
+        resultado[i] = str1[i];
+        
+    }
+    
+    for(j = 0; str2[j] != '\0'; j++)
+        resultado[i+j] = str2[j];
+        
+    resultado[i+j] = '\0';
+
+}
+ 
+bool stringsIguais( char s1[],  char s2[]){
+    
+    int i = 0;
+    bool igual;
+    
+    while(s1[i] == s2[i] &&
+          s1[i] != '\0' &&
+          s2[i] != '\0'){
+        
+        i++;
+        
+        if(s1[i] == '\0' && s2[i] == '\0'){
+            
+            igual = true;
+            
+        } else {
+            
+            igual = false;
+            
+        }
+        
+    }
+    
+    return igual;
+    
+    
+}
+
+ 
+
