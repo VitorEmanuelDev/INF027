@@ -6,7 +6,7 @@ somaColunas deverá ser armazenada a soma da coluna correspondente na matriz A.*
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <time.h>//era para usar a função rand
 #define size 5
 
 int main()
