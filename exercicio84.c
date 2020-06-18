@@ -3,12 +3,14 @@ mesmos caracteres quando lida da direita para a esquerda).*/
 
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 #define size 50
 
 int main()
 {
 	char str[size], strNorm1[size], strNorm2[size];
 	int i, j = 0, contador;
+	bool palindromo = true;
 	
 	printf("Escreva uma frase:\n");
 	fgets(str, size, stdin);
@@ -33,7 +35,7 @@ int main()
     for(j = 0, contador = 0; strNorm1[j] != '\0'; j++){
         
         contador++;
-        strNorm2[j]= strNorm1[j];
+        strNorm2[j] = strNorm1[j];
         //printf("%c",strNorm[j]);
         
     }
@@ -46,11 +48,33 @@ int main()
     //    
     //}
     
-    if(strcmp(strNorm1, strNorm2) == 0){
+    
+    for(i = 0; strNorm1[i] != '\0' && strNorm2[i] != '\0'; i++){
+        
+        if(strNorm1[i] != strNorm2[i]){
+            
+            palindromo = false;
+            break;
+            
+        }
+        
+    }
+    
+    if(palindromo == true){
         
         printf("\n%s corresponde a %s ao contrário.", strNorm1, strNorm2);
         
+    }else{
+        
+        printf("\n%s não corresponde a %s ao contrário.", strNorm1, strNorm2);
+        
     }
+    
+    //if(strcmp(strNorm1, strNorm2) == 0){
+    //    
+    //    printf("\n%s corresponde a %s ao contrário.", strNorm1, strNorm2);
+    //    
+    //}
  
  return 0;
     
