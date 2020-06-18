@@ -4,7 +4,7 @@ simétrica possui a mesma composição de valores abaixo e acima da diagonal pri
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <time.h>//era para usar a função rand
 #include <stdbool.h>
 #define size 5
 
