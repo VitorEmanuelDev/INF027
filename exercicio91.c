@@ -25,7 +25,7 @@ int main()
     
     int i, j, somaLinha = 0, somaColuna = 0;
     
-    //na moral?!?!? é um pé um saco ter que ficar informando cada valor da matriz...
+    //na moral?!?!? use a matriz teste se não quiser informar os valores um por um
     
     printf("Informe o valor dos elementos da matriz:\n");
     
