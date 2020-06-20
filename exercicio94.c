@@ -19,7 +19,7 @@ int main()
         {6,5,5,5,5,6}
         
     }; //matriz teste para não ter que informar cada valor
-    int matrizB[size][size];
+    
     int i, j, numero;
     
     //na moral?!?!? use a matriz teste se não quiser informar os valores um por um
