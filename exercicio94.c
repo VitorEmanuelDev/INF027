@@ -24,7 +24,7 @@ int main()
     
     //na moral?!?!? use a matriz teste se não quiser informar os valores um por um
     
-    //printf("Informe o valor dos elementos da matriz:\n");
+    //printf("Informe os valores dos elementos da matriz:\n");
     //
     //for (i = 0; i < size; i++){
     //    
