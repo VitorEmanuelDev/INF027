@@ -124,7 +124,7 @@ int main()
     //    
     //}
     
-    //encontrar a idade mais frequente
+    //encontrar a idade mais frequente dos homens
     contaModa = 0;
     atual = 0;
     contaAtual = 0;
@@ -137,7 +137,7 @@ int main()
 	  while(atual == homens[i]){
 	      
 	    i++;  
-	  	contaAtual++;
+	    contaAtual++;
 	  	
 	  }	
 	  
@@ -150,21 +150,22 @@ int main()
 	  
 	}
 	
+	//encontrar a idade mais frequente das mulheres
 	contaModa = 0;
 	atual = 0;
 	contaAtual = 0;
     
 	for(i = 0; i < casais; i++){
 	    
-	  atual = mulheres[i]; 
-  	  contaAtual = 0;
+		atual = mulheres[i]; 
+  	  	contaAtual = 0;
   	  
-	  while(atual == mulheres[i]){
+	  	while(atual == mulheres[i]){
 	      
-	    i++;  
-	  	contaAtual++;
+	  	  i++;  
+	  	  contaAtual++;
 	  	
-	  }	
+	  	}	
 	  
 	  if(contaAtual > contaModa){
 	      
