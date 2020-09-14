@@ -22,3 +22,5 @@ Curso introdutório Excript: https://www.youtube.com/playlist?list=PLesCEcYj003S
 Strings in C:https://www.codingame.com/playgrounds/14213/how-to-play-with-strings-in-c/what-is-a-string-in-c
 
 Pointers in C:https://www.codingame.com/playgrounds/14589/how-to-play-with-pointers-in-c/address-of-a-variable
+
+Revisão: https://www.studytonight.com/c/programs/
