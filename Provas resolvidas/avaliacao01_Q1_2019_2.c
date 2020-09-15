@@ -30,9 +30,9 @@ int main()
     printf("Qual a distância a ser percorrida durante o treinamento?\n");
     scanf("%d", &treinamento);
     
-    resto = (treinamento/pista); // 34 / 12 = 2
+    //resto = (treinamento/pista); // 34 / 12 = 2
     
-    termino = pista - resto; // 12 - 2 = 10
+    //termino = pista - resto; // 12 - 2 = 10
     
     termino = treinamento%pista; // 34 % 12 = 10
     
