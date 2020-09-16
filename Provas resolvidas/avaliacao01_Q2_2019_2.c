@@ -65,78 +65,81 @@ int main()
             
             printf("Categoria inválida.\n");
             
-    } else if (carta1 == carta2 && carta1 == carta3){
+    } else if ((carta1 == carta2 && carta2 == carta3) &&
+               (carta4 == carta5 && carta5 == carta6)){
         
-            printf("Primeira mão venceu");
-        
-    } else if (carta4 == carta5 && carta4 == carta6){
-        
-            printf("Segunda mão venceu");
-        
-    } else if ((carta1 == carta2 || carta1 == carta3 || carta2 == carta3) &&
-                (carta4 != carta5 && carta4 != carta6 && carta5 != carta6)) {
-                
-            printf("Primeira mão venceu");
-                
-    } else if ((carta4 == carta5 || carta4 == carta6 || carta5 == carta6) &&
-                (carta1 != carta2 && carta1 != carta3 && carta2 != carta3)){
-        
-            printf("Segunda mão venceu");
-        
-    } else if((carta1 == carta2 && carta1 == carta3) &&
-                (carta4 == carta5 && carta4 == carta6)) {
-                
         if(mao1 > mao2){
             
-            printf("A primeira mão venceu.");
+            printf("Primeira mão venceu.");
             
-        } else if (mao1 < mao2) {
+        } else if (mao1 < mao2){
             
-            printf("A segunda mão venceu.");
+            printf("Segunda mão venceu.");
             
         } else {
             
             printf("Empate");
             
-        } 
-                
+        }
+        
+    } else if((carta1 == carta2 && carta2 == carta3) && 
+             ((carta4 == carta5 || carta4 == carta6 || carta5 == carta6) ||
+             (carta4 != carta5 && carta4 != carta6 && carta5 != carta6))){
+        
+        printf("Primeira mão venceu.");
+        
+    } else if((carta4 == carta5 && carta5 == carta6) &&
+             ((carta1 == carta2 || carta1 == carta3 || carta2 == carta3) ||
+             (carta1 != carta2 && carta2 != carta3 && carta1 != carta3))){
+        
+        printf("Segunda mão venceu.");
+        
     } else if ((carta1 == carta2 || carta1 == carta3 || carta2 == carta3) &&
                (carta4 == carta5 || carta4 == carta6 || carta5 == carta6)){
-             
+        
         if(mao1 > mao2){
             
-            printf("A primeira mão venceu.");
+            printf("Primeira mão venceu.");
             
-        } else if (mao1 < mao2) {
+        } else if (mao1 < mao2){
             
-            printf("A segunda mão venceu.");
+            printf("Segunda mão venceu.");
             
         } else {
             
             printf("Empate");
             
-        } 
-                   
+        }
+        
     } else if ((carta1 != carta2 && carta1 != carta3 && carta2 != carta3) &&
-                (carta4 != carta5 && carta4 != carta6 && carta5 != carta6)){
+              (carta4 != carta5 && carta4 != carta6 && carta5 != carta6)){
         
         if(mao1 > mao2){
             
-            printf("A primeira mão venceu.");
+            printf("Primeira mão venceu.");
             
-        } else if (mao1 < mao2) {
+        } else if (mao1 < mao2){
             
-            printf("A segunda mão venceu.");
+            printf("Segunda mão venceu.");
             
         } else {
             
             printf("Empate");
             
-        } 
+        }
         
-    } 
+    } else if ((carta1 == carta2 || carta1 == carta3 || carta2 == carta3) &&
+               (carta4 != carta5 && carta4 != carta6 && carta5 != carta6)) {
+            
+        printf("Primeira mão venceu.");
+            
+    } else if ((carta4 == carta5 || carta4 == carta6 || carta5 == carta6) &&
+              (carta1 != carta2 && carta1 != carta3 && carta2 != carta3)) {
+            
+        printf("Segunda mão venceu.");
+            
+    }
     
     return 0;
+    
 }
-
-
