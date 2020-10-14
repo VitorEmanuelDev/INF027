@@ -18,7 +18,7 @@ existem 5 subsequencias cuja soma dos números é igual a K = 5.
 
 #include <stdio.h>
 #include <stdlib.h>
-#define TAM 500//teste
+//#define TAM 10//teste
 
 int main(void) {
 
@@ -44,7 +44,7 @@ int main(void) {
 
 	}
 
-	int sequencia[TAM];// = {1,0,2,2,0,0,8,5,3,2};//teste
+	int sequencia[tamanho];// = {1,0,2,2,0,0,8,5,3,2};//teste
 
 	printf("Informe os valores da sua sequencia:");
 
@@ -63,8 +63,7 @@ int main(void) {
 
 	for(int iteracao = 0; iteracao < tamanho; iteracao++){
 
-		//reiniciar o loop com a variavel contador para que a leitura do array recomece a partir do
-		//ponto de referencia atual e não do início 0
+		//reiniciar o loop com o contador para que a leitura do array recomece a partir do ponto de referencia atual e não do início 0
 		for(int subcontagem = contador; subcontagem < tamanho; subcontagem++){
 
 			soma += sequencia[subcontagem];
@@ -99,9 +98,14 @@ int main(void) {
 				soma = 0;
 				break;
 
+			} else if(sequencia[subcontagem] + sequencia[subcontagem + 1] == valorMax){
+			    
+			    subsequencia++;
+				break;
+			    
 			}
 
-			if(sequencia[subcontagem] == valorMax && sequencia[subcontagem + 1] == 0){
+        		if(sequencia[subcontagem] == valorMax && sequencia[subcontagem + 1] == 0){
 												//e
 				subsequencia++;
 				break;
@@ -129,5 +133,6 @@ cenários de teste:
 [7 7 7 7 5 2 1 5 9 0]
 [1 2 3 5 6 7 2 1 6 1] 3
 [1,2,0,3,5] 2
-[1,2,2,0,5,3,2,0,0,0] 5
 */
+
+
