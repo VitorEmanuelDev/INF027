@@ -3,8 +3,6 @@ Exercícios de lógica de programação - inf027
 
 Editor: https://www.onlinegdb.com/
 
-Visualizador: http://www.pythontutor.com/visualize.html#mode=edit
-
 Lista de um tal de Kelvin: https://www.kelvinsantiago.com.br/exercicios-resolvidos-em-linguagem-c-lista-a/
 
 Material de estudo 1: https://www.ime.usp.br/~elo/IntroducaoComputacao/
