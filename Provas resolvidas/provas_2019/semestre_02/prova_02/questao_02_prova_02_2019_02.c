@@ -52,7 +52,7 @@ int main(void) {
 		   cadeiaA[atualA] != '\0'){
 
 			printf("Caractere inválido. Use apenas 'A', 'T', 'G' ou 'C'");
-			exit(0);
+			return 0;
 
 		}
 
@@ -72,7 +72,7 @@ int main(void) {
 		   cadeiaA[atualB] != '\0'){
 
 			printf("Caractere inválido. Use apenas 'A', 'T', 'G' ou 'C'");
-			exit(0);
+			return 0;
 
 		}
 
@@ -104,7 +104,7 @@ int main(void) {
 	if(tamanhoA <= 7 || tamanhoB <= 7){
 
 		printf("\nSequencia curta demais para ser analisada.");
-		exit(0);
+		return 0;
 
 	}
 
@@ -183,14 +183,14 @@ int main(void) {
 				//mas o valor do parentesco for superior ou igual 62%,
 				//informe o grau de parentesco e saia do programa
 				printf("\n\nParentesco de %.2f%%\nDiagnóstico: POSITIVO", parentesco * 100);
-				exit(0);
+				return 0;
 
 			}
 
 			if(parentesco == 1){
 
 				printf("\n\nParentesco de %.2f%%\nDiagnóstico: POSITIVO", parentesco * 100);
-				exit(0);
+				return 0;
 
 			}
 
@@ -213,7 +213,7 @@ int main(void) {
 			//caso uma das variaveis acima vá invadir espaço de memória,
 			//mostre o último registro de compatibilidade e pare o programa
 		   printf("\n\nParentesco de %.2f%%\nDiagnóstico: NEGATIVO", negativo * 100);
-		   exit(0);
+		   return 0;
 
 		}
 
@@ -222,7 +222,7 @@ int main(void) {
 			//caso uma das variaveis acima vá invadir espaço de memória,
 			//mostre o último registro de compatibilidade e pare o programa
 		   printf("\n\nParentesco de %.2f%%\nDiagnóstico: POSITIVO", parentesco * 100);
-		   exit(0);
+		   return 0;
 
 		}
 
@@ -230,6 +230,6 @@ int main(void) {
 	}
 
 	printf("\n\nParentesco de %.2f%%\nDiagnóstico: NEGATIVO", negativo * 100);
-	exit(0);
+	return 0;
 
 }
