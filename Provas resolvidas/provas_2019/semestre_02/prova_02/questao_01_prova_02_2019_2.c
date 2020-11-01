@@ -70,6 +70,7 @@ int main(void) {
 			if(soma == valorMax){
 
 				subsequencia++;
+				break;
 
 			}
 
