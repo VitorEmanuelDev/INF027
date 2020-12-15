@@ -1,5 +1,5 @@
-# inf027
-Exercícios de lógica de programação - inf027 
+# INF027
+Exercícios de lógica de programação - INF027 
 
 Editor: https://www.onlinegdb.com/
 
