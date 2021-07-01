@@ -13,173 +13,184 @@ programa deverá informar:
 
 int main()
 {
-    int casais, i, j, k, armazena = 0;
-    int contaModa = 0, contaAtual = 0;
-    int atual, modaHomens = 0, modaMulheres = 0;
-    int matrizCasais[casais][2], homens[casais], mulheres[casais];
-    
+    int casais = 7;
+    int /*matrizCasais[casais][2],*/ homens[casais], mulheres[casais];
+
+
+   /*
     //informar quantas linhas a matriz vai ter
     printf("Quantos casais há?:\n");
     scanf("%d", &casais);
-    
+
     // usuário informa cada idade que vai ser armazenada na matriz
     printf("Informe as idades dos casais (18 a 30 / H e M):\n");
-    
+
     for(i = 0; i < casais; i++){
-        
+
         for(j = 0; j < 2; j++){
-                
+
             scanf("%d", &matrizCasais[i][j]);
 
             if(matrizCasais[i][j] > 30 || matrizCasais[i][j] < 18){
-                
+
                 break;
-                
+
             }
-            
+
         }
-        
+
     }
-    
-    
+    */
+
+
+    //teste
+   int matrizCasais[7][2] = {{27, 23},
+                           {24, 21},
+                           {24, 21},
+                           {27, 23},
+                           {29, 21},
+						   {27, 23},
+						   {26, 21}};
+
     // mostrar as idades dos casais
     printf("\nIdades dos casais:\n");
-    
-    for(i = 0; i < casais; i++){
-    
-        for(j = 0; j < 2; j++){
-            
+
+    for(int i = 0; i < casais; i++){
+
+        for(int j = 0; j < 2; j++){
+
             printf("%4d", matrizCasais[i][j]);
-            
+
             if(matrizCasais[i][j] > 30 || matrizCasais[i][j] < 18){
-                
+
                 printf(" => Idade inválida.\n");
                 break;
-                
+
             }
-            
+
         }
-    
+
         printf("\n");
-        
+
     }
-    
+
+    int freq_homens[casais];
+    int freq_mulheres[casais];
+
+
     // separar idades de homens e mulheres em dois arrays diferentes
     printf("\nHomens:\n");
-    
-    for(i = 0; i < casais; i++){
-    
+
+    for(int i = 0; i < casais; i++){
+
         homens[i] = matrizCasais[i][0];
+        freq_homens[i] = -1;
         printf("%d ", homens[i]);
-        
+
     }
-    
+
     printf("\nMulheres:\n");
-    
-    for(i = 0; i < casais; i++){
-    
+
+    for(int i = 0; i < casais; i++){
+
         mulheres[i] = matrizCasais[i][1];
+        freq_mulheres[i] = -1;
         printf("%d ", mulheres[i]);
-        
+
     }
-	
-    
-    // ordenar arrays
-    for(i = 0; i < casais; i++){
-        
-       for(j = i + 1; j < casais; j++){
-           
-            if(homens[i] > homens[j]){
-               
-                armazena = homens[i];
-                homens[i] = homens[j];
-                homens[j] = armazena;
-               
+
+	 printf("\n");
+
+
+    int cont_homens;
+    int cont_mulheres;
+    for(int i = 0; i < casais; i++){
+
+        cont_homens = 1;
+        cont_mulheres = 1;
+        for(int j = i + 1; j < casais; j++){
+
+            /* Se elemento duplicado for encontrado */
+            if(homens[i] == homens[j]){
+
+                cont_homens++;
+
+                /* para não contar a frequencia do mesmo elemento de novo */
+                freq_homens[j] = 0;
             }
-            
-            if(mulheres[i] > mulheres[j]){
-                       
-                armazena = mulheres[i];
-                mulheres[i] = mulheres[j];
-                mulheres[j] = armazena;
-                       
-            }
-           
+
+	   if(mulheres[i] == mulheres[j]){
+
+		   cont_mulheres++;
+
+
+		   freq_mulheres[j] = 0;
+	   }
         }
-        
+
+        /* Se a frequencia do elemento atual não for contada*/
+        if(freq_homens[i] != 0){
+
+        	freq_homens[i] = cont_homens;
+        }
+
+	if(freq_mulheres[i] != 0){
+
+		freq_mulheres[i] = cont_mulheres;
+	}
     }
-    
-    //verificar se o bubble sort funcionou da forma correta.
-    //for(i = 0; i < casais; i++){
-    //
-    //    mulheres[i];
-    //    printf("%d ", mulheres[i]);
-    //    
-    //}
-    //
-    //for(i = 0; i < casais; i++){
-    //
-    //    homens[i];
-    //    printf("%d ", homens[i]);
-    //    
-    //}
-    
-    //encontrar a idade mais frequente dos homens
-    contaModa = 0;
-    atual = 0;
-    contaAtual = 0;
-    
-	for(i = 0; i < casais; i++){
-	    
-	  atual = homens[i]; 
-  	  contaAtual = 0;
-  	  
-	  while(atual == homens[i]){
-	      
-	    i++;  
-	    contaAtual++;
-	  	
-	  }	
-	  
-	  if(contaAtual > contaModa){
-	      
-	    contaModa = contaAtual;
-	  	modaHomens = atual;
-	  	
-	  }
-	  
+
+    int maior_h = 0;
+    int pos_h = 0;
+    int maior_m = 0;
+    int pos_m = 0;
+
+    for(int i = 0; i < casais; i++){
+
+    	if(freq_homens[i] > maior_h){
+
+    		maior_h = freq_homens[i];
+    		pos_h = i;
+
+    	}
+    	if(freq_mulheres[i] > maior_m){
+
+		maior_m = freq_mulheres[i];
+		pos_m = i;
+
 	}
-	
-	//encontrar a idade mais frequente das mulheres
-	contaModa = 0;
-	atual = 0;
-	contaAtual = 0;
-    
-	for(i = 0; i < casais; i++){
-	    
-		atual = mulheres[i]; 
-  	  	contaAtual = 0;
-  	  
-	  	while(atual == mulheres[i]){
-	      
-	  	  i++;  
-	  	  contaAtual++;
-	  	
-	  	}	
-	  
-	  if(contaAtual > contaModa){
-	      
-	  	contaModa = contaAtual;
-	  	modaMulheres = atual;
-	  	
-	  }
-	  
-	}
-	
-	printf("\n\nA idade mais frequente de casamento para homens é de: %d", modaHomens);
-	
-	printf("\nA idade mais frequente de casamento para mulheres é de: %d", modaMulheres);
+
+    }
+
+    int idade_h = homens[0];
+    int idade_m = mulheres[0];
+    int soma_i;
+    int soma_j;
+
+    for(int i = 0; i < casais; i++){
+
+         for(int j = i + 1; j < casais; j++){
+
+        	soma_i = homens[i] + mulheres[i];
+        	soma_j = homens[j] + mulheres[j];
+
+        	 if((soma_i == soma_j) && (homens[i] == homens[j]) && (mulheres[i] == mulheres[j])){
+
+				 idade_h = homens[i];
+				 idade_m = mulheres[i];
+
+        	 }
+
+         }
+    }
+
+
+	printf("\nA idade mais frequente de casamento para homens é de: %d", homens[pos_h]);
+
+	printf("\nA idade mais frequente de casamento para mulheres é de: %d", mulheres[pos_m]);
+
+	printf("\nA combinação mais frequente é %d e %d.", idade_h, idade_m);
 
     return 0;
-    
+
 }
