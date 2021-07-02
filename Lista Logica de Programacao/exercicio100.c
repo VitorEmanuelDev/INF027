@@ -30,9 +30,9 @@ int main()
                          { 4, 3, 2, 1 } };
 */
 	int soma_l;
-	int soma_ac_l;
+	int soma_ac_l = 0;
 	int soma_c;
-	int soma_ac_c;
+	int soma_ac_c = 0;
 
 	for (int i = 0; i < N; i++) {
     	soma_l = 0;
@@ -46,6 +46,7 @@ int main()
 			soma_ac_c += matriz[j][i];
 
         }
+        //printf("%d ", soma_ac_l);
         if(soma_ac_l % soma_l != 0 || soma_ac_c % soma_c != 0){
 
         	printf("A matriz informada NÃO é um quadrado latino: soma de colunas e linhas difere.");
