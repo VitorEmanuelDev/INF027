@@ -8,20 +8,20 @@ ou coluna é permutação dos N primeiros números inteiros. */
 
 int main()
 {
-		int N;
+	int N;
 
-	    printf("Quantos elementos para cada coluna e cada linha?\n");
-	    scanf("%d", &N);
+    printf("Quantos elementos para cada coluna e cada linha?\n");
+    scanf("%d", &N);
 
-	    int matriz[N][N];
+    int matriz[N][N];
 
-	    printf("Informe os valores da matriz:\n");
-	    for(int i = 0; i < N; i++){
-	        for(int j = 0; j < N; j++){
-	            scanf("%d", &matriz[i][j]);
+    printf("Informe os valores da matriz:\n");
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < N; j++){
+            scanf("%d", &matriz[i][j]);
 
-	        }
-	    }
+        }
+    }
 	//teste
 	/*int N = 4;
     int matriz[4][4] = { { 1, 2, 3, 4 },
@@ -57,11 +57,11 @@ int main()
     }
 
 
-  int flag = 0;
+  //int flag;
 
 	for (int i = 0; i < N; i++) {
 
-		flag = 0;
+		int flag = 0;
 
 		for (int j = 0; j < N; j++) {
 
